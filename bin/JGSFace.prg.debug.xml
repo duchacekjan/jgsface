@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="E:\GARMIN\JGSFace\manifest.xml"/>
+<pcToLineNum>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="1" lineNum="2" parent="globals/JGSFaceBatteryColorLevels" pc="268435456" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="1" lineNum="3" parent="globals/JGSFaceBatteryColorLevels" pc="268435460" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="2" lineNum="5" parent="globals/JGSFaceBatteryColorLevels" pc="268435493" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="2" lineNum="6" parent="globals/JGSFaceBatteryColorLevels" pc="268435497" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="2" lineNum="7" parent="globals/JGSFaceBatteryColorLevels" pc="268435507" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="2" lineNum="8" parent="globals/JGSFaceBatteryColorLevels" pc="268435518" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="2" lineNum="9" parent="globals/JGSFaceBatteryColorLevels" pc="268435537" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="2" lineNum="11" parent="globals/JGSFaceBatteryColorLevels" pc="268435548" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="2" lineNum="13" parent="globals/JGSFaceBatteryColorLevels" pc="268435567" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="2" lineNum="15" parent="globals/JGSFaceBatteryColorLevels" pc="268435583" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="3" lineNum="1" parent="globals/JGSFaceBatteryColorLevels" pc="268440112" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceBatteryColorLevels.mc" id="3" lineNum="1" parent="globals/JGSFaceBatteryColorLevels" pc="268440112" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceColorLevels.mc" id="5" lineNum="3" parent="globals/JGSFaceColorLevels" pc="268435587" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceColorLevels.mc" id="5" lineNum="4" parent="globals/JGSFaceColorLevels" pc="268435591" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceColorLevels.mc" id="6" lineNum="7" parent="globals/JGSFaceColorLevels" pc="268435602" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceColorLevels.mc" id="6" lineNum="8" parent="globals/JGSFaceColorLevels" pc="268435606" symbol="getColor"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceColorLevels.mc" id="7" lineNum="2" parent="globals/JGSFaceColorLevels" pc="268440181" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceColorLevels.mc" id="7" lineNum="1" parent="globals/JGSFaceColorLevels" pc="268440181" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="9" lineNum="11" parent="globals/JGSFaceCircleProgress" pc="268435616" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="9" lineNum="12" parent="globals/JGSFaceCircleProgress" pc="268435620" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="10" lineNum="15" parent="globals/JGSFaceCircleProgress" pc="268435631" symbol="drawCircleProgress"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="10" lineNum="16" parent="globals/JGSFaceCircleProgress" pc="268435635" symbol="drawCircleProgress"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="10" lineNum="17" parent="globals/JGSFaceCircleProgress" pc="268435653" symbol="drawCircleProgress"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="10" lineNum="18" parent="globals/JGSFaceCircleProgress" pc="268435673" symbol="drawCircleProgress"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="11" lineNum="21" parent="globals/JGSFaceCircleProgress" pc="268435694" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="11" lineNum="22" parent="globals/JGSFaceCircleProgress" pc="268435698" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="11" lineNum="23" parent="globals/JGSFaceCircleProgress" pc="268435710" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="11" lineNum="26" parent="globals/JGSFaceCircleProgress" pc="268435714" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="11" lineNum="27" parent="globals/JGSFaceCircleProgress" pc="268435748" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="12" lineNum="30" parent="globals/JGSFaceCircleProgress" pc="268435773" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="12" lineNum="31" parent="globals/JGSFaceCircleProgress" pc="268435777" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="12" lineNum="32" parent="globals/JGSFaceCircleProgress" pc="268435789" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="12" lineNum="34" parent="globals/JGSFaceCircleProgress" pc="268435793" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="12" lineNum="35" parent="globals/JGSFaceCircleProgress" pc="268435847" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="12" lineNum="36" parent="globals/JGSFaceCircleProgress" pc="268435858" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="12" lineNum="38" parent="globals/JGSFaceCircleProgress" pc="268435871" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="12" lineNum="39" parent="globals/JGSFaceCircleProgress" pc="268435902" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="42" parent="globals/JGSFaceCircleProgress" pc="268435931" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="43" parent="globals/JGSFaceCircleProgress" pc="268435935" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="44" parent="globals/JGSFaceCircleProgress" pc="268435939" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="45" parent="globals/JGSFaceCircleProgress" pc="268435950" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="47" parent="globals/JGSFaceCircleProgress" pc="268435960" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="48" parent="globals/JGSFaceCircleProgress" pc="268435985" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="49" parent="globals/JGSFaceCircleProgress" pc="268436000" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="50" parent="globals/JGSFaceCircleProgress" pc="268436028" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="51" parent="globals/JGSFaceCircleProgress" pc="268436035" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="52" parent="globals/JGSFaceCircleProgress" pc="268436055" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="53" parent="globals/JGSFaceCircleProgress" pc="268436062" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="54" parent="globals/JGSFaceCircleProgress" pc="268436073" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="56" parent="globals/JGSFaceCircleProgress" pc="268436086" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="57" parent="globals/JGSFaceCircleProgress" pc="268436102" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="58" parent="globals/JGSFaceCircleProgress" pc="268436113" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="60" parent="globals/JGSFaceCircleProgress" pc="268436132" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="13" lineNum="61" parent="globals/JGSFaceCircleProgress" pc="268436162" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="14" lineNum="64" parent="globals/JGSFaceCircleProgress" pc="268436180" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;getProgressColor&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="14" lineNum="65" parent="globals/JGSFaceCircleProgress" pc="268436184" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;getProgressColor&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="15" lineNum="3" parent="globals/JGSFaceCircleProgress" pc="268440023" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="15" lineNum="4" parent="globals/JGSFaceCircleProgress" pc="268440045" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="15" lineNum="7" parent="globals/JGSFaceCircleProgress" pc="268440089" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCircleProgress.mc" id="15" lineNum="1" parent="globals/JGSFaceCircleProgress" pc="268440023" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="2" parent="globals/JGSFaceCommon" pc="268436205" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="3" parent="globals/JGSFaceCommon" pc="268436209" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="4" parent="globals/JGSFaceCommon" pc="268436228" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="5" parent="globals/JGSFaceCommon" pc="268436267" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="6" parent="globals/JGSFaceCommon" pc="268436321" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="7" parent="globals/JGSFaceCommon" pc="268436346" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="8" parent="globals/JGSFaceCommon" pc="268436353" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="10" parent="globals/JGSFaceCommon" pc="268436389" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="48" parent="globals/JGSFaceCommon" pc="268436713" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="12" parent="globals/JGSFaceCommon" pc="268436723" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="13" parent="globals/JGSFaceCommon" pc="268436730" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="16" parent="globals/JGSFaceCommon" pc="268436733" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="17" parent="globals/JGSFaceCommon" pc="268436740" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="20" parent="globals/JGSFaceCommon" pc="268436743" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="21" parent="globals/JGSFaceCommon" pc="268436750" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="24" parent="globals/JGSFaceCommon" pc="268436753" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="25" parent="globals/JGSFaceCommon" pc="268436760" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="28" parent="globals/JGSFaceCommon" pc="268436763" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="29" parent="globals/JGSFaceCommon" pc="268436770" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="32" parent="globals/JGSFaceCommon" pc="268436773" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="33" parent="globals/JGSFaceCommon" pc="268436780" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="36" parent="globals/JGSFaceCommon" pc="268436783" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="37" parent="globals/JGSFaceCommon" pc="268436790" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="40" parent="globals/JGSFaceCommon" pc="268436793" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="41" parent="globals/JGSFaceCommon" pc="268436800" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="44" parent="globals/JGSFaceCommon" pc="268436803" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="45" parent="globals/JGSFaceCommon" pc="268436810" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="52" parent="globals/JGSFaceCommon" pc="268436816" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="53" parent="globals/JGSFaceCommon" pc="268436821" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="56" parent="globals/JGSFaceCommon" pc="268436837" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="57" parent="globals/JGSFaceCommon" pc="268436848" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="58" parent="globals/JGSFaceCommon" pc="268436876" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="60" parent="globals/JGSFaceCommon" pc="268436925" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="61" parent="globals/JGSFaceCommon" pc="268436964" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="62" parent="globals/JGSFaceCommon" pc="268436981" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="66" parent="globals/JGSFaceCommon" pc="268437017" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="69" parent="globals/JGSFaceCommon" pc="268437023" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="73" parent="globals/JGSFaceCommon" pc="268437065" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="17" lineNum="74" parent="globals/JGSFaceCommon" pc="268437093" symbol="drawWeatherIcon"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="18" lineNum="78" parent="globals/JGSFaceCommon" pc="268437146" symbol="drawDateString"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="18" lineNum="79" parent="globals/JGSFaceCommon" pc="268437150" symbol="drawDateString"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="18" lineNum="80" parent="globals/JGSFaceCommon" pc="268437206" symbol="drawDateString"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="18" lineNum="81" parent="globals/JGSFaceCommon" pc="268437268" symbol="drawDateString"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="18" lineNum="82" parent="globals/JGSFaceCommon" pc="268437308" symbol="drawDateString"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="18" lineNum="83" parent="globals/JGSFaceCommon" pc="268437335" symbol="drawDateString"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="18" lineNum="84" parent="globals/JGSFaceCommon" pc="268437396" symbol="drawDateString"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="87" parent="globals/JGSFaceCommon" pc="268437467" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="88" parent="globals/JGSFaceCommon" pc="268437471" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="89" parent="globals/JGSFaceCommon" pc="268437499" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="90" parent="globals/JGSFaceCommon" pc="268437516" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="91" parent="globals/JGSFaceCommon" pc="268437523" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="92" parent="globals/JGSFaceCommon" pc="268437536" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="93" parent="globals/JGSFaceCommon" pc="268437578" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="94" parent="globals/JGSFaceCommon" pc="268437623" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="95" parent="globals/JGSFaceCommon" pc="268437628" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="96" parent="globals/JGSFaceCommon" pc="268437673" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="97" parent="globals/JGSFaceCommon" pc="268437678" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="19" lineNum="99" parent="globals/JGSFaceCommon" pc="268437723" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="20" lineNum="103" parent="globals/JGSFaceCommon" pc="268437742" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="20" lineNum="104" parent="globals/JGSFaceCommon" pc="268437746" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="20" lineNum="105" parent="globals/JGSFaceCommon" pc="268437753" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="20" lineNum="106" parent="globals/JGSFaceCommon" pc="268437784" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="20" lineNum="107" parent="globals/JGSFaceCommon" pc="268437812" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="111" parent="globals/JGSFaceCommon" pc="268437838" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="112" parent="globals/JGSFaceCommon" pc="268437842" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="113" parent="globals/JGSFaceCommon" pc="268437867" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="114" parent="globals/JGSFaceCommon" pc="268437874" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="115" parent="globals/JGSFaceCommon" pc="268437881" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="116" parent="globals/JGSFaceCommon" pc="268437884" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="117" parent="globals/JGSFaceCommon" pc="268437903" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="118" parent="globals/JGSFaceCommon" pc="268437916" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="119" parent="globals/JGSFaceCommon" pc="268437927" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="123" parent="globals/JGSFaceCommon" pc="268437940" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="124" parent="globals/JGSFaceCommon" pc="268437964" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="125" parent="globals/JGSFaceCommon" pc="268437984" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="126" parent="globals/JGSFaceCommon" pc="268437991" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="128" parent="globals/JGSFaceCommon" pc="268437998" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="129" parent="globals/JGSFaceCommon" pc="268438020" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="131" parent="globals/JGSFaceCommon" pc="268438027" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="21" lineNum="133" parent="globals/JGSFaceCommon" pc="268438036" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="22" lineNum="1" parent="globals/JGSFaceCommon" pc="268440180" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceCommon.mc" id="23" lineNum="1" parent="globals/JGSFaceCommon" pc="268438039" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="25" lineNum="7" parent="globals/JGSFaceApp" pc="268438042" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="25" lineNum="8" parent="globals/JGSFaceApp" pc="268438046" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="26" lineNum="12" parent="globals/JGSFaceApp" pc="268438065" symbol="onStart"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="27" lineNum="16" parent="globals/JGSFaceApp" pc="268438070" symbol="onStop"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="28" lineNum="20" parent="globals/JGSFaceApp" pc="268438075" symbol="getInitialView"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="28" lineNum="21" parent="globals/JGSFaceApp" pc="268438079" symbol="getInitialView"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="29" lineNum="5" parent="globals/JGSFaceApp" pc="268440161" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="29" lineNum="5" parent="globals/JGSFaceApp" pc="268440161" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="30" lineNum="26" parent="globals" pc="268438117" symbol="getApp"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceApp.mc" id="30" lineNum="27" parent="globals" pc="268438129" symbol="getApp"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="32" lineNum="14" parent="globals/JGSFaceView" pc="268438146" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="32" lineNum="15" parent="globals/JGSFaceView" pc="268438150" symbol="initialize"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="33" lineNum="19" parent="globals/JGSFaceView" pc="268438169" symbol="onLayout"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="33" lineNum="20" parent="globals/JGSFaceView" pc="268438173" symbol="onLayout"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="33" lineNum="21" parent="globals/JGSFaceView" pc="268438216" symbol="onLayout"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="33" lineNum="22" parent="globals/JGSFaceView" pc="268438259" symbol="onLayout"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="33" lineNum="23" parent="globals/JGSFaceView" pc="268438302" symbol="onLayout"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="33" lineNum="24" parent="globals/JGSFaceView" pc="268438345" symbol="onLayout"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="33" lineNum="25" parent="globals/JGSFaceView" pc="268438364" symbol="onLayout"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="34" lineNum="31" parent="globals/JGSFaceView" pc="268438384" symbol="onShow"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="35" parent="globals/JGSFaceView" pc="268438389" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="37" parent="globals/JGSFaceView" pc="268438393" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="38" parent="globals/JGSFaceView" pc="268438429" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="40" parent="globals/JGSFaceView" pc="268438441" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="41" parent="globals/JGSFaceView" pc="268438458" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="42" parent="globals/JGSFaceView" pc="268438516" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="43" parent="globals/JGSFaceView" pc="268438574" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="44" parent="globals/JGSFaceView" pc="268438621" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="45" parent="globals/JGSFaceView" pc="268438681" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="46" parent="globals/JGSFaceView" pc="268438695" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="47" parent="globals/JGSFaceView" pc="268438709" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="48" parent="globals/JGSFaceView" pc="268438723" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="35" lineNum="49" parent="globals/JGSFaceView" pc="268438747" symbol="onUpdate"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="36" lineNum="52" parent="globals/JGSFaceView" pc="268438790" symbol="updateNotifications"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="36" lineNum="53" parent="globals/JGSFaceView" pc="268438794" symbol="updateNotifications"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="36" lineNum="54" parent="globals/JGSFaceView" pc="268438817" symbol="updateNotifications"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="36" lineNum="55" parent="globals/JGSFaceView" pc="268438828" symbol="updateNotifications"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="36" lineNum="56" parent="globals/JGSFaceView" pc="268438864" symbol="updateNotifications"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="36" lineNum="57" parent="globals/JGSFaceView" pc="268438903" symbol="updateNotifications"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="37" lineNum="62" parent="globals/JGSFaceView" pc="268438961" symbol="updateWeather"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="37" lineNum="63" parent="globals/JGSFaceView" pc="268438965" symbol="updateWeather"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="37" lineNum="64" parent="globals/JGSFaceView" pc="268438981" symbol="updateWeather"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="37" lineNum="65" parent="globals/JGSFaceView" pc="268438991" symbol="updateWeather"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="37" lineNum="66" parent="globals/JGSFaceView" pc="268439015" symbol="updateWeather"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="38" lineNum="69" parent="globals/JGSFaceView" pc="268439039" symbol="updateContouredText"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="38" lineNum="70" parent="globals/JGSFaceView" pc="268439043" symbol="updateContouredText"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="38" lineNum="71" parent="globals/JGSFaceView" pc="268439071" symbol="updateContouredText"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="39" lineNum="74" parent="globals/JGSFaceView" pc="268439100" symbol="updateTimeLabel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="39" lineNum="75" parent="globals/JGSFaceView" pc="268439104" symbol="updateTimeLabel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="39" lineNum="77" parent="globals/JGSFaceView" pc="268439131" symbol="updateTimeLabel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="39" lineNum="78" parent="globals/JGSFaceView" pc="268439157" symbol="updateTimeLabel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="81" parent="globals/JGSFaceView" pc="268439192" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="82" parent="globals/JGSFaceView" pc="268439196" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="83" parent="globals/JGSFaceView" pc="268439228" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="84" parent="globals/JGSFaceView" pc="268439244" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="85" parent="globals/JGSFaceView" pc="268439257" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="86" parent="globals/JGSFaceView" pc="268439289" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="87" parent="globals/JGSFaceView" pc="268439314" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="88" parent="globals/JGSFaceView" pc="268439357" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="89" parent="globals/JGSFaceView" pc="268439377" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="90" parent="globals/JGSFaceView" pc="268439393" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="91" parent="globals/JGSFaceView" pc="268439403" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="40" lineNum="92" parent="globals/JGSFaceView" pc="268439433" symbol="updateBatteryLevel"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="41" lineNum="98" parent="globals/JGSFaceView" pc="268439473" symbol="onHide"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="41" lineNum="99" parent="globals/JGSFaceView" pc="268439477" symbol="onHide"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="41" lineNum="100" parent="globals/JGSFaceView" pc="268439486" symbol="onHide"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="41" lineNum="101" parent="globals/JGSFaceView" pc="268439495" symbol="onHide"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="41" lineNum="102" parent="globals/JGSFaceView" pc="268439504" symbol="onHide"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="42" lineNum="106" parent="globals/JGSFaceView" pc="268439514" symbol="onExitSleep"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="43" lineNum="110" parent="globals/JGSFaceView" pc="268439519" symbol="onEnterSleep"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="44" lineNum="6" parent="globals/JGSFaceView" pc="268440004" symbol="&lt;init&gt;"/>
+<entry filename="E:\\GARMIN\\JGSFace\\source\\JGSFaceView.mc" id="44" lineNum="6" parent="globals/JGSFaceView" pc="268440004" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="46" lineNum="2" parent="globals/Rez/Drawables" pc="268440155" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="47" lineNum="6" parent="globals/Rez/Fonts" pc="268440157" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="48" lineNum="15" parent="globals/Rez/JsonData" pc="268440159" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="49" lineNum="24" parent="globals/Rez/Layouts" pc="268439524" symbol="WatchFace"/>
+<entry filename="Rez" id="49" lineNum="26" parent="globals/Rez/Layouts" pc="268439536" symbol="WatchFace"/>
+<entry filename="Rez" id="49" lineNum="27" parent="globals/Rez/Layouts" pc="268439669" symbol="WatchFace"/>
+<entry filename="Rez" id="49" lineNum="28" parent="globals/Rez/Layouts" pc="268439802" symbol="WatchFace"/>
+<entry filename="Rez" id="49" lineNum="30" parent="globals/Rez/Layouts" pc="268439965" symbol="WatchFace"/>
+<entry filename="Rez" id="50" lineNum="17" parent="globals/Rez/Layouts" pc="268440158" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="51" lineNum="35" parent="globals/Rez/Menus" pc="268440156" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="52" lineNum="37" parent="globals/Rez/Strings" pc="268440160" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="53" lineNum="1" parent="globals/Rez" pc="268440131" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="53" lineNum="1" parent="globals/Rez" pc="268440131" symbol="&lt;init&gt;"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="24" method="true" symbol="updateTimeLabel"/>
+<entry field="true" id="31" symbol="isProgressTextVisible"/>
+<entry field="true" id="27" symbol="leadColor"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry id="4" module="true" symbol="globals/Rez/Menus"/>
+<entry field="true" id="50" symbol="mDefaultColor"/>
+<entry id="11" object="true" symbol="JGSFaceCircleProgress"/>
+<entry field="true" id="26" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;mRadius&gt;"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="48" method="true" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawTemperature&gt;"/>
+<entry field="true" id="43" symbol="iconsFont"/>
+<entry id="21" method="true" symbol="updateNotifications"/>
+<entry field="true" id="8388962" symbol="temperature"/>
+<entry id="46" method="true" symbol="drawDateString"/>
+<entry field="true" id="44" symbol="AppName"/>
+<entry field="true" id="29" symbol="isLeadVisible"/>
+<entry field="true" id="16" symbol="contouredBFont"/>
+<entry id="8" module="true" symbol="globals/Rez/Strings"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry field="true" id="15" symbol="contouredFont"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry id="25" method="true" symbol="updateBatteryLevel"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry field="true" id="8389348" symbol="font"/>
+<entry field="true" id="8389067" symbol="height"/>
+<entry id="40" module="true" symbol="Menus"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+<entry field="true" id="8389066" symbol="width"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="14" object="true" symbol="JGSFaceView"/>
+<entry id="8389349" symbol="justification"/>
+<entry id="8391661" method="true" symbol="getCurrentConditions"/>
+<entry field="true" id="30" symbol="stroke"/>
+<entry id="10" object="true" symbol="JGSFaceColorLevels"/>
+<entry id="33" method="true" symbol="drawCircleProgress"/>
+<entry field="true" id="18" symbol="temperatureFont"/>
+<entry id="7" module="true" symbol="globals/Rez/JsonData"/>
+<entry id="12" object="true" symbol="JGSFaceCommon"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="9" object="true" symbol="JGSFaceBatteryColorLevels"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="47" method="true" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry field="true" id="41" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry field="true" id="17" symbol="weatherFont"/>
+<entry id="13" object="true" symbol="JGSFaceApp"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry field="true" id="8391672" symbol="feelsLikeTemperature"/>
+<entry id="38" method="true" symbol="getColor"/>
+<entry id="23" method="true" symbol="updateContouredText"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="45" method="true" symbol="drawWeatherIcon"/>
+<entry field="true" id="42" symbol="temperatureFeelFont"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="19" symbol="&lt;globals/JGSFaceView/&lt;&gt;BATTERY_R&gt;"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="32" symbol="isReverse"/>
+<entry id="49" method="true" symbol="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="8389347" symbol="color"/>
+<entry id="22" method="true" symbol="updateWeather"/>
+<entry id="35" method="true" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;"/>
+<entry id="39" module="true" symbol="Layouts"/>
+<entry field="true" id="20" symbol="&lt;globals/JGSFaceView/&lt;&gt;STEPS_R&gt;"/>
+<entry id="34" method="true" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawLead&gt;"/>
+<entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+<entry field="true" id="28" symbol="progressColor"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry id="36" method="true" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;"/>
+<entry id="37" method="true" symbol="&lt;globals/JGSFaceCircleProgress/&lt;&gt;getProgressColor&gt;"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435585" name="result" stackId="2" startPc="268435497"/>
+<entry arg="true" endPc="268435586" name="value" stackId="1" startPc="268435493"/>
+<entry arg="true" endPc="268435601" name="color" stackId="1" startPc="268435587"/>
+<entry arg="true" endPc="268435615" name="value" stackId="1" startPc="268435602"/>
+<entry arg="true" endPc="268435630" name="radius" stackId="1" startPc="268435616"/>
+<entry arg="true" endPc="268435693" name="x" stackId="2" startPc="268435631"/>
+<entry arg="true" endPc="268435693" name="dc" stackId="1" startPc="268435631"/>
+<entry arg="true" endPc="268435693" name="percentageProgress" stackId="4" startPc="268435631"/>
+<entry arg="true" endPc="268435693" name="y" stackId="3" startPc="268435631"/>
+<entry arg="true" endPc="268435772" name="x" stackId="2" startPc="268435694"/>
+<entry arg="true" endPc="268435772" name="dc" stackId="1" startPc="268435694"/>
+<entry arg="true" endPc="268435772" name="y" stackId="3" startPc="268435694"/>
+<entry endPc="268435929" name="justify" stackId="6" startPc="268435777"/>
+<entry endPc="268435929" name="text" stackId="5" startPc="268435777"/>
+<entry arg="true" endPc="268435930" name="x" stackId="2" startPc="268435773"/>
+<entry arg="true" endPc="268435930" name="dc" stackId="1" startPc="268435773"/>
+<entry arg="true" endPc="268435930" name="percentageProgress" stackId="4" startPc="268435773"/>
+<entry arg="true" endPc="268435930" name="y" stackId="3" startPc="268435773"/>
+<entry endPc="268436178" name="topLevel" stackId="8" startPc="268435935"/>
+<entry endPc="268436178" name="color" stackId="7" startPc="268435935"/>
+<entry endPc="268436178" name="arcEnd" stackId="9" startPc="268435935"/>
+<entry endPc="268436178" name="arc" stackId="10" startPc="268435935"/>
+<entry endPc="268436178" name="progressValue" stackId="5" startPc="268435935"/>
+<entry endPc="268436178" name="progressLevel" stackId="6" startPc="268435935"/>
+<entry arg="true" endPc="268436179" name="x" stackId="2" startPc="268435931"/>
+<entry arg="true" endPc="268436179" name="dc" stackId="1" startPc="268435931"/>
+<entry arg="true" endPc="268436179" name="percentageProgress" stackId="4" startPc="268435931"/>
+<entry arg="true" endPc="268436179" name="y" stackId="3" startPc="268435931"/>
+<entry arg="true" endPc="268436204" name="percentageProgress" stackId="1" startPc="268436180"/>
+<entry endPc="268437058" name="temperature" stackId="11" startPc="268436848"/>
+<entry endPc="268437058" name="temperatureFont" stackId="10" startPc="268436848"/>
+<entry endPc="268437058" name="hasTemperature" stackId="12" startPc="268436848"/>
+<entry endPc="268437061" name="isNight" stackId="9" startPc="268436321"/>
+<entry endPc="268437061" name="condition" stackId="8" startPc="268436321"/>
+<entry endPc="268437061" name="weather" stackId="7" startPc="268436321"/>
+<entry endPc="268437144" name="WeatherFont" stackId="6" startPc="268436209"/>
+<entry endPc="268437144" name="clockTime" stackId="5" startPc="268436209"/>
+<entry arg="true" endPc="268437145" name="x" stackId="2" startPc="268436205"/>
+<entry arg="true" endPc="268437145" name="dc" stackId="1" startPc="268436205"/>
+<entry arg="true" endPc="268437145" name="color" stackId="4" startPc="268436205"/>
+<entry arg="true" endPc="268437145" name="y" stackId="3" startPc="268436205"/>
+<entry endPc="268437465" name="dateStr" stackId="5" startPc="268437150"/>
+<entry endPc="268437465" name="info" stackId="4" startPc="268437150"/>
+<entry endPc="268437465" name="offset" stackId="6" startPc="268437150"/>
+<entry arg="true" endPc="268437466" name="x" stackId="2" startPc="268437146"/>
+<entry arg="true" endPc="268437466" name="dc" stackId="1" startPc="268437146"/>
+<entry arg="true" endPc="268437466" name="y" stackId="3" startPc="268437146"/>
+<entry endPc="268437740" name="radius" stackId="7" startPc="268437471"/>
+<entry arg="true" endPc="268437741" name="x" stackId="2" startPc="268437467"/>
+<entry arg="true" endPc="268437741" name="dc" stackId="1" startPc="268437467"/>
+<entry arg="true" endPc="268437741" name="color" stackId="4" startPc="268437467"/>
+<entry arg="true" endPc="268437741" name="hasTemperature" stackId="5" startPc="268437467"/>
+<entry arg="true" endPc="268437741" name="hasTemperatureFeel" stackId="6" startPc="268437467"/>
+<entry arg="true" endPc="268437741" name="y" stackId="3" startPc="268437467"/>
+<entry endPc="268437833" name="justify" stackId="7" startPc="268437753"/>
+<entry arg="true" endPc="268437837" name="temperature" stackId="5" startPc="268437742"/>
+<entry arg="true" endPc="268437837" name="x" stackId="2" startPc="268437742"/>
+<entry arg="true" endPc="268437837" name="dc" stackId="1" startPc="268437742"/>
+<entry arg="true" endPc="268437837" name="color" stackId="6" startPc="268437742"/>
+<entry arg="true" endPc="268437837" name="font" stackId="4" startPc="268437742"/>
+<entry arg="true" endPc="268437837" name="y" stackId="3" startPc="268437742"/>
+<entry endPc="268438037" name="temperature" stackId="6" startPc="268437842"/>
+<entry endPc="268438037" name="units" stackId="5" startPc="268437842"/>
+<entry endPc="268438037" name="temp" stackId="4" startPc="268437842"/>
+<entry endPc="268438037" name="targetMetric" stackId="3" startPc="268437842"/>
+<entry arg="true" endPc="268438038" name="useFeel" stackId="2" startPc="268437838"/>
+<entry arg="true" endPc="268438038" name="weather" stackId="1" startPc="268437838"/>
+<entry arg="true" endPc="268438069" name="state" stackId="1" startPc="268438065"/>
+<entry arg="true" endPc="268438074" name="state" stackId="1" startPc="268438070"/>
+<entry arg="true" endPc="268438383" name="dc" stackId="1" startPc="268438169"/>
+<entry endPc="268438788" name="minString" stackId="4" startPc="268438393"/>
+<entry endPc="268438788" name="hourString" stackId="3" startPc="268438393"/>
+<entry endPc="268438788" name="common" stackId="5" startPc="268438393"/>
+<entry endPc="268438788" name="clockTime" stackId="2" startPc="268438393"/>
+<entry arg="true" endPc="268438789" name="dc" stackId="1" startPc="268438389"/>
+<entry endPc="268438956" name="icons" stackId="3" startPc="268438828"/>
+<entry endPc="268438959" name="notificationCount" stackId="2" startPc="268438794"/>
+<entry arg="true" endPc="268438960" name="dc" stackId="1" startPc="268438790"/>
+<entry endPc="268439037" name="x" stackId="2" startPc="268438965"/>
+<entry endPc="268439037" name="common" stackId="4" startPc="268438965"/>
+<entry endPc="268439037" name="y" stackId="3" startPc="268438965"/>
+<entry arg="true" endPc="268439038" name="dc" stackId="1" startPc="268438961"/>
+<entry arg="true" endPc="268439099" name="dc" stackId="1" startPc="268439039"/>
+<entry arg="true" endPc="268439099" name="color" stackId="4" startPc="268439039"/>
+<entry arg="true" endPc="268439099" name="text" stackId="2" startPc="268439039"/>
+<entry arg="true" endPc="268439099" name="y" stackId="5" startPc="268439039"/>
+<entry arg="true" endPc="268439099" name="borderColor" stackId="3" startPc="268439039"/>
+<entry endPc="268439190" name="justify" stackId="6" startPc="268439104"/>
+<entry arg="true" endPc="268439191" name="dc" stackId="1" startPc="268439100"/>
+<entry arg="true" endPc="268439191" name="font" stackId="5" startPc="268439100"/>
+<entry arg="true" endPc="268439191" name="color" stackId="3" startPc="268439100"/>
+<entry arg="true" endPc="268439191" name="text" stackId="2" startPc="268439100"/>
+<entry arg="true" endPc="268439191" name="y" stackId="4" startPc="268439100"/>
+<entry endPc="268439471" name="x" stackId="3" startPc="268439196"/>
+<entry endPc="268439471" name="progress" stackId="2" startPc="268439196"/>
+<entry endPc="268439471" name="activityInfo" stackId="6" startPc="268439196"/>
+<entry endPc="268439471" name="progress2" stackId="5" startPc="268439196"/>
+<entry endPc="268439471" name="stepPercent" stackId="7" startPc="268439196"/>
+<entry endPc="268439471" name="y" stackId="4" startPc="268439196"/>
+<entry arg="true" endPc="268439472" name="dc" stackId="1" startPc="268439192"/>
+<entry endPc="268440001" name="rez_cmp_local_text_HourLabelB" stackId="2" startPc="268439536"/>
+<entry endPc="268440001" name="rez_cmp_local_text_MinLabel" stackId="4" startPc="268439536"/>
+<entry endPc="268440001" name="rez_cmp_local_text_HourLabel" stackId="3" startPc="268439536"/>
+<entry arg="true" endPc="268440002" name="dc" stackId="1" startPc="268439524"/>
+</localVars>
+<annotations>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="contouredFont"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="contouredBFont"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="temperatureFont"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="temperatureFeelFont"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="weatherFont"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="iconsFont"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/JGSFaceView" offset="190" parentId="globals" symbolId="JGSFaceView" type="class"/>
+<dataEntry label="globals/JGSFaceCircleProgress" offset="389" parentId="globals" symbolId="JGSFaceCircleProgress" type="class"/>
+<dataEntry label="globals/JGSFaceBatteryColorLevels" offset="540" parentId="globals" symbolId="JGSFaceBatteryColorLevels" type="class"/>
+<dataEntry label="globals/Rez" offset="595" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/Rez/Drawables" offset="674" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="713" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="744" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="823" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/JsonData" offset="862" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="893" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/JGSFaceApp" offset="932" parentId="globals" symbolId="JGSFaceApp" type="class"/>
+<dataEntry label="globals/JGSFaceCommon" offset="1003" parentId="globals" symbolId="JGSFaceCommon" type="class"/>
+<dataEntry label="globals/JGSFaceColorLevels" offset="1090" parentId="globals" symbolId="JGSFaceColorLevels" type="class"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435492" name="initialize" parent="JGSFaceBatteryColorLevels" startPc="268435456">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435586" name="getColor" parent="JGSFaceBatteryColorLevels" startPc="268435493">
+<param id="value"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440130" name="&lt;init&gt;" parent="JGSFaceBatteryColorLevels" startPc="268440112">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435601" name="initialize" parent="JGSFaceColorLevels" startPc="268435587">
+<param id="color"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435615" name="getColor" parent="JGSFaceColorLevels" startPc="268435602">
+<param id="value"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440203" name="&lt;init&gt;" parent="JGSFaceColorLevels" startPc="268440181">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435630" name="initialize" parent="JGSFaceCircleProgress" startPc="268435616">
+<param id="radius"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435693" name="drawCircleProgress" parent="JGSFaceCircleProgress" startPc="268435631">
+<param id="dc"/>
+<param id="x"/>
+<param id="y"/>
+<param id="percentageProgress"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268435772" name="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawLead&gt;" parent="JGSFaceCircleProgress" startPc="268435694">
+<param id="dc"/>
+<param id="x"/>
+<param id="y"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268435930" name="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgressText&gt;" parent="JGSFaceCircleProgress" startPc="268435773">
+<param id="dc"/>
+<param id="x"/>
+<param id="y"/>
+<param id="percentageProgress"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436179" name="&lt;globals/JGSFaceCircleProgress/&lt;&gt;drawProgress&gt;" parent="JGSFaceCircleProgress" startPc="268435931">
+<param id="dc"/>
+<param id="x"/>
+<param id="y"/>
+<param id="percentageProgress"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436204" name="&lt;globals/JGSFaceCircleProgress/&lt;&gt;getProgressColor&gt;" parent="JGSFaceCircleProgress" startPc="268436180">
+<param id="percentageProgress"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440111" name="&lt;init&gt;" parent="JGSFaceCircleProgress" startPc="268440023">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437145" name="drawWeatherIcon" parent="JGSFaceCommon" startPc="268436205">
+<param id="dc"/>
+<param id="x"/>
+<param id="y"/>
+<param id="color"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437466" name="drawDateString" parent="JGSFaceCommon" startPc="268437146">
+<param id="dc"/>
+<param id="x"/>
+<param id="y"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268437741" name="&lt;globals/JGSFaceCommon/&lt;&gt;drawWeatherLead&gt;" parent="JGSFaceCommon" startPc="268437467">
+<param id="dc"/>
+<param id="x"/>
+<param id="y"/>
+<param id="color"/>
+<param id="hasTemperature"/>
+<param id="hasTemperatureFeel"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268437837" name="&lt;globals/JGSFaceCommon/&lt;&gt;drawTemperature&gt;" parent="JGSFaceCommon" startPc="268437742">
+<param id="dc"/>
+<param id="x"/>
+<param id="y"/>
+<param id="font"/>
+<param id="temperature"/>
+<param id="color"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268438038" name="&lt;globals/JGSFaceCommon/&lt;&gt;getTemperature&gt;" parent="JGSFaceCommon" startPc="268437838">
+<param id="weather"/>
+<param id="useFeel"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440180" name="&lt;init&gt;" parent="JGSFaceCommon" startPc="268440180">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438041" name="initialize" parent="JGSFaceCommon" startPc="268438039">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438064" name="initialize" parent="JGSFaceApp" startPc="268438042">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438069" name="onStart" parent="JGSFaceApp" startPc="268438065">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438074" name="onStop" parent="JGSFaceApp" startPc="268438070">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438116" name="getInitialView" parent="JGSFaceApp" startPc="268438075">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440179" name="&lt;init&gt;" parent="JGSFaceApp" startPc="268440161">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438145" name="getApp" startPc="268438117">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438168" name="initialize" parent="JGSFaceView" startPc="268438146">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438383" name="onLayout" parent="JGSFaceView" startPc="268438169">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438388" name="onShow" parent="JGSFaceView" startPc="268438384">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438789" name="onUpdate" parent="JGSFaceView" startPc="268438389">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438960" name="updateNotifications" parent="JGSFaceView" startPc="268438790">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439038" name="updateWeather" parent="JGSFaceView" startPc="268438961">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439099" name="updateContouredText" parent="JGSFaceView" startPc="268439039">
+<param id="dc"/>
+<param id="text"/>
+<param id="borderColor"/>
+<param id="color"/>
+<param id="y"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439191" name="updateTimeLabel" parent="JGSFaceView" startPc="268439100">
+<param id="dc"/>
+<param id="text"/>
+<param id="color"/>
+<param id="y"/>
+<param id="font"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439472" name="updateBatteryLevel" parent="JGSFaceView" startPc="268439192">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439513" name="onHide" parent="JGSFaceView" startPc="268439473">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439518" name="onExitSleep" parent="JGSFaceView" startPc="268439514">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439523" name="onEnterSleep" parent="JGSFaceView" startPc="268439519">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440022" name="&lt;init&gt;" parent="JGSFaceView" startPc="268440004">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440155" name="&lt;init&gt;" parent="Drawables" startPc="268440155">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440157" name="&lt;init&gt;" parent="Fonts" startPc="268440157">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440159" name="&lt;init&gt;" parent="JsonData" startPc="268440159">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440002" name="WatchFace" parent="Layouts" startPc="268439524">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440158" name="&lt;init&gt;" parent="Layouts" startPc="268440158">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440156" name="&lt;init&gt;" parent="Menus" startPc="268440156">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440160" name="&lt;init&gt;" parent="Strings" startPc="268440160">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440154" name="&lt;init&gt;" parent="Rez" startPc="268440131">
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

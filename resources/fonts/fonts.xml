@@ -1,0 +1,8 @@
+<fonts>
+    <font id="contouredFont" filename="contoured.fnt" filter="0123456789" antialias="true"/>
+    <font id="contouredBFont" filename="contoured_border.fnt" filter="0123456789" antialias="true"/>
+    <font id="temperatureFont" filename="temperature.fnt" antialias="true"/>
+    <font id="temperatureFeelFont" filename="temperature-feel.fnt" antialias="true"/>
+    <font id="weatherFont" filename="weather-icons.fnt" antialias="true"/>
+    <font id="iconsFont" filename="icons-font.fnt" antialias="true"/>
+</fonts>
