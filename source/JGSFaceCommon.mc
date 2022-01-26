@@ -1,78 +1,29 @@
 class JGSFaceCommon{
+    var _weatherIconMap;
+    function initialize(){
+        _weatherIconMap = new JgsWeatherIconMap();
+    }
     function drawWeatherIcon(dc, x, y, color) {
 		var clockTime = System.getClockTime();
 		var WeatherFont = Application.loadResource(Rez.Fonts.weatherFont);
+        var condition = null;
 		if(Toybox.Weather has :getCurrentConditions and Toybox.Weather.getCurrentConditions() != null) {
-            var weather = Toybox.Weather.getCurrentConditions();
-            var condition = "";
-            var isNight = clockTime.hour >= 18 or clockTime.hour < 6;
+            var weather = Toybox.Weather.getCurrentConditions();            
+            condition = weather.condition;
 
-            switch(weather.condition){
-                case Toybox.Weather.CONDITION_CLEAR:{
-                    condition = "A";
-                    break;
-                }
-                case Toybox.Weather.CONDITION_PARTLY_CLOUDY:{
-                    condition="B";
-                    break;
-                }
-                case Toybox.Weather.CONDITION_RAIN:{
-                    condition="C";
-                    break;
-                }
-                case Toybox.Weather.CONDITION_FOG:{
-                    condition="D";
-                    break;
-                }
-                case Toybox.Weather.CONDITION_MOSTLY_CLEAR:{
-                    condition="E";
-                    break;
-                }
-                case Toybox.Weather.CONDITION_LIGHT_SNOW:{
-                    condition="F";
-                    break;
-                }
-                case Toybox.Weather.CONDITION_HEAVY_SNOW:{
-                    condition="G";
-                    break;
-                }
-                case Toybox.Weather.CONDITION_THUNDERSTORMS:{
-                    condition="H";
-                    break;
-                }
-                case Toybox.Weather.CONDITION_CLOUDY:{
-                    condition="I";
-                    break;
-                }
-                default:{
-                    condition="Z";
-                }
-            }
-
-            if(isNight){
-                condition = condition.toLower();
-            }
-
-            if(condition!=""){
-                dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(x, y, WeatherFont, condition, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
-
+            var temperature = getTemperature(weather);
+            if(temperature!=null){
                 var temperatureFont = Application.loadResource(Rez.Fonts.temperatureFont);            
-                var temperature = getTemperature(weather, false);
                 drawTemperature(dc, x+10, y-28, temperatureFont, temperature, color);
-                // var temperatureFeelFont = Application.loadResource(Rez.Fonts.temperatureFeelFont);
-                // var temperatureFeel = getTemperature(weather, true);
-                // drawTemperature(dc, x-22, y+20, temperatureFeelFont, temperatureFeel, color);
-                var hasTemperature = temperature!=null;
-                //var hasTemperatureFeel = temperatureFeel!=null;
-                //drawWeatherLead(dc, x, y, Graphics.COLOR_DK_GRAY, hasTemperature, hasTemperatureFeel);
-                drawWeatherLead(dc, x, y, Graphics.COLOR_DK_GRAY, hasTemperature, false);
             }
         }
         else{
-            dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(x, y, WeatherFont, "Z", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
         }
+        var iconCode = _weatherIconMap.getWeatherIconCode(condition);
+            dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(x, y, WeatherFont, iconCode, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+            
+        drawWeatherLead(dc, x, y, Graphics.COLOR_DK_GRAY);
 	}
 
     function drawDateString( dc, x, y ) {
@@ -84,38 +35,30 @@ class JGSFaceCommon{
         dc.drawText(x, y+offset, Graphics.FONT_TINY, info.day_of_week, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
-    private function drawWeatherLead(dc,x,y, color, hasTemperature, hasTemperatureFeel){
+    private function drawWeatherLead(dc,x,y, color){
         dc.setColor(color, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(1);
         var radius = 30;
-        if(hasTemperature && hasTemperatureFeel){
-            dc.drawArc(x, y, radius, Graphics.ARC_COUNTER_CLOCKWISE, 120, 195);
-            dc.drawArc(x, y, radius, Graphics.ARC_COUNTER_CLOCKWISE, 255, 25);
-        }else if(hasTemperature){            
-            dc.drawArc(x, y, radius, Graphics.ARC_COUNTER_CLOCKWISE, 120, 25);
-        } else if(hasTemperatureFeel){
-            dc.drawArc(x, y, radius, Graphics.ARC_COUNTER_CLOCKWISE, 255, 195);
-        }else{
-            dc.drawCircle(x, y, radius);
-        }
+        dc.drawCircle(x, y, radius);
     }
 
     private function drawTemperature(dc, x, y, font, temperature, color){
         if (temperature != null ){
             var justify = Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER;
-            dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+            dc.setColor(color, Graphics.COLOR_BLACK);
             dc.drawText(x, y, font, temperature, justify);
         }
     }
 
-    private function getTemperature(weather, useFeel){
+    private function getTemperature(weather){
         var targetMetric = System.getDeviceSettings().temperatureUnits;
         var temp = "";
         var units = "";
         var temperature = null;
-        if(useFeel && weather has :feelsLikeTemperature){
-            temperature = weather.feelsLikeTemperature;
-        }else if(weather has :temperature){
+        // if(weather has :feelsLikeTemperatrure){
+        //     temperature = weather.feelsLikeTemperature;
+        // } else
+        if(weather has :temperature){
             temperature = weather.temperature;
         }
 
