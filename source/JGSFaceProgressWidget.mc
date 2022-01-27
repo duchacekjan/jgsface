@@ -31,8 +31,8 @@ class JGSFaceProgressWidget {
         }
          
         updateSteps(dc, activityInfo);
+        updateBatteryStatus(dc);
         drawProgress(dc, RADIUS_M, 50, Graphics.COLOR_GREEN);
-        drawProgress(dc, RADIUS_S, 100, Graphics.COLOR_RED);
         dc.setPenWidth(1);
         var font = Graphics.FONT_SYSTEM_XTINY;
         dc.drawText(x, y, batteryFont, "100", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
@@ -53,6 +53,12 @@ class JGSFaceProgressWidget {
         }
         var color = getStepsColor();
         drawProgress(dc, RADIUS_L, stepsProgress, color);
+    }
+
+    private function updateBatteryStatus(dc){
+        var batteryLevel = getBatteryLevel();
+        var color = getBatteryColor(batteryLevel);
+        drawProgress(dc, RADIUS_S, batteryLevel, color);
     }
 
     private function drawProgress(dc as Dc, radius, percentageProgress, color){
@@ -78,5 +84,21 @@ class JGSFaceProgressWidget {
 
     private function getStepsProgress(activityInfo){
         return 100.0 * activityInfo.steps.toFloat() / activityInfo.stepGoal.toFloat();
+    }
+
+    private function getBatteryColor(progressValue){
+        var result;
+        if (progressValue <= 10){
+            result = Graphics.COLOR_DK_RED;
+        } else if (progressValue <= 40){
+            result = Graphics.COLOR_DK_BLUE;
+        } else {
+            result = Graphics.COLOR_DK_GREEN;
+        }
+        return result;
+    }
+
+    private function getBatteryLevel(){
+        return System.getSystemStats().battery;
     }
 }
