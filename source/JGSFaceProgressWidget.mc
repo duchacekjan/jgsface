@@ -25,9 +25,14 @@ class JGSFaceProgressWidget {
 
     function update(dc){
         drawLeads(dc);
-        drawProgress2(dc, RADIUS_L, 75, getStepsColor(75));
-        drawProgress2(dc, RADIUS_M, 50, Graphics.COLOR_GREEN);
-        drawProgress2(dc, RADIUS_S, 100, Graphics.COLOR_RED);
+        var activityInfo = null;
+        if(Toybox.ActivityMonitor has :getInfo){
+            activityInfo = Toybox.ActivityMonitor.getInfo();
+        }
+         
+        updateSteps(dc, activityInfo);
+        drawProgress(dc, RADIUS_M, 50, Graphics.COLOR_GREEN);
+        drawProgress(dc, RADIUS_S, 100, Graphics.COLOR_RED);
         dc.setPenWidth(1);
         var font = Graphics.FONT_SYSTEM_XTINY;
         dc.drawText(x, y, batteryFont, "100", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
@@ -41,19 +46,16 @@ class JGSFaceProgressWidget {
         dc.drawCircle(x, y, RADIUS_L);
     }
 
-    private function drawProgress(dc, radius, progress){
-        dc.setPenWidth(PROGRESS_STROKE);
-        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-        //TODO caculate correctly
-        var startAngle = 90;
-        var endAngle = (360.0 * progress/100.0)-90.0;
-        if(endAngle<0){
-            endAngle=360+endAngle;
+    private function updateSteps(dc, activityInfo){
+        var stepsProgress = 0;
+        if(activityInfo!=null){
+            stepsProgress = getStepsProgress(activityInfo);
         }
-        dc.drawArc(x, y, radius, Graphics.ARC_CLOCKWISE, startAngle, endAngle);
+        var color = getStepsColor();
+        drawProgress(dc, RADIUS_L, stepsProgress, color);
     }
 
-    private function drawProgress2(dc as Dc, radius, percentageProgress, color){
+    private function drawProgress(dc as Dc, radius, percentageProgress, color){
         var progressValue = percentageProgress;
         if (percentageProgress > 100.0){
             progressValue = 100.0;
@@ -67,14 +69,14 @@ class JGSFaceProgressWidget {
             arcEnd = 360 + arcEnd;
         }
         var arc = Graphics.ARC_CLOCKWISE;
-        // if(isReverse){
-        //     arc = Graphics.ARC_COUNTER_CLOCKWISE;
-        // }
         dc.drawArc(x, y, radius, arc, topLevel, arcEnd);
-        dc.setPenWidth(1);
     }
 
-    private function getStepsColor(progressValue){
+    private function getStepsColor(){
         return Graphics.COLOR_BLUE;
+    }
+
+    private function getStepsProgress(activityInfo){
+        return 100.0 * activityInfo.steps.toFloat() / activityInfo.stepGoal.toFloat();
     }
 }
