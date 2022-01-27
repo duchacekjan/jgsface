@@ -5,29 +5,28 @@ import Toybox.WatchUi;
 
 class JGSFaceView extends WatchUi.WatchFace {
     var width, height;
-    var contouredFont = null;
-    var contouredBFont = null;
     var weatherFont =null;
     var temperatureFont =null;
     private const BATTERY_R = 20;
     private const STEPS_R = 30;
 
     private var weatherWidget = null;
+    private var timeWidget = null;
 
     function initialize() {
         WatchFace.initialize();
         weatherWidget = new JGSFaceWeatherWidget();
+        timeWidget = new JGSFaceTimeWidget();
     }
 
     // Load your resources here
     function onLayout(dc as Dc) as Void {
-        contouredFont = WatchUi.loadResource(Rez.Fonts.contouredFont);
-        contouredBFont = WatchUi.loadResource(Rez.Fonts.contouredBFont);
         temperatureFont = WatchUi.loadResource(Rez.Fonts.temperatureFont);
         weatherFont = WatchUi.loadResource(Rez.Fonts.weatherFont);
         width=dc.getWidth();
 		height=dc.getHeight();
         weatherWidget.loadResources();
+        timeWidget.loadResources();
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -42,17 +41,12 @@ class JGSFaceView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
     	dc.clear();
 
-        var clockTime = System.getClockTime();
-        var hourString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
-        var minString = Lang.format("$1$", [clockTime.min.format("%02d")]);
-        updateContouredText(dc, hourString, 0xf8f800, Graphics.COLOR_BLACK, height/4);
-        updateContouredText(dc, minString, Graphics.COLOR_WHITE, Graphics.COLOR_LT_GRAY, 3*height/4);
         updateBatteryLevel(dc);
-        //updateWeather(dc);
         updateNotifications(dc);
         var common = new JGSFaceCommon();
         common.drawDateString(dc, width / 6, height/2);
         weatherWidget.update(dc);
+        timeWidget.update(dc);
     }
 
     function updateNotifications(dc as Dc){
@@ -61,27 +55,7 @@ class JGSFaceView extends WatchUi.WatchFace {
             dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
             var icons =  Application.loadResource(Rez.Fonts.iconsFont);
             dc.drawText(5, 15, icons, "B", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
-        }
-        
-    }
-
-    // function updateWeather(dc as Dc){
-    //     var x = width/6;
-    //     var y = x+20;
-    //     var common = new JGSFaceCommon();
-    //     common.drawWeatherIcon(dc, x, y, 0xf8f800);
-    // }
-
-    function updateContouredText(dc as Dc, text as String, borderColor as Color, color as Color, y as Int) as Void{
-        updateTimeLabel(dc, text, borderColor, y, contouredBFont);
-        updateTimeLabel(dc, text, color, y, contouredFont);
-    }
-
-    function updateTimeLabel(dc as Dc, text as String, color as Color, y as Int, font as Font) as Void{
-        var justify = Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER;
-
-        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(width-2,y,font,text,justify);
+        }        
     }
 
     function updateBatteryLevel(dc as Dc) as Void{
@@ -103,11 +77,10 @@ class JGSFaceView extends WatchUi.WatchFace {
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() as Void {
-        contouredFont = null;
-        contouredBFont = null;
         weatherFont =null;
         temperatureFont =null;
         weatherWidget.freeResources();
+        timeWidget.freeResources();
     }
 
     // The user has just looked at their watch. Timers and animations may be started here.
