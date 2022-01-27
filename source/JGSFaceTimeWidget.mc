@@ -38,6 +38,6 @@ class JGSFaceTimeWidget{
         var justify = Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER;
 
         dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x-5,y,font,text,justify);
+        dc.drawText(x-1,y,font,text,justify);
     }
 }
