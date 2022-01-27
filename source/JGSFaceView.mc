@@ -83,6 +83,7 @@ class JGSFaceView extends WatchUi.WatchFace {
         var x = width/6;
         var y = height-x;
         var progress2 = new JGSFaceCircleProgress(STEPS_R);
+        progress2.progressColor = new JGSFaceColorLevels(Graphics.COLOR_BLUE);
         var activityInfo = Toybox.ActivityMonitor.getInfo();
         var stepPercent = 100.0*activityInfo.steps.toFloat()/activityInfo.stepGoal.toFloat();
         progress2.drawCircleProgress(dc, x, y, stepPercent);
