@@ -4,5 +4,8 @@
 			"name": "JGSFace",
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"editor.formatOnSave": true
+	}
 }
