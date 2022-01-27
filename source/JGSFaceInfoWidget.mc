@@ -26,22 +26,25 @@ class JGSFaceInfoWidget {
     function update(dc){
         var settings = System.getDeviceSettings();
         updateNotifications(dc, settings);
-        updateDoNotDisturb(dc, settings);
-        updateAlarmClock(dc, settings);
+        var offset = updateDoNotDisturb(dc, settings);
+        updateAlarmClock(dc, settings, offset);
         updateHR(dc);
     }
 
     private function updateDoNotDisturb(dc, settings){
+        var offset = 0;
         if(settings.doNotDisturb){
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             dc.drawText(0 + edge, height / 2, iconsFont, "C", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+            offset = 25;
         }
+        return offset;
     }
 
-    private function updateAlarmClock(dc, settings){
+    private function updateAlarmClock(dc, settings, offset){
         if(settings.alarmCount>0){
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(0 + edge + 25, height / 2, iconsFont, "D", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(0 + edge + offset, height / 2, iconsFont, "D", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
         }
     }
 
