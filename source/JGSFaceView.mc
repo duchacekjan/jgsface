@@ -11,8 +11,12 @@ class JGSFaceView extends WatchUi.WatchFace {
     var temperatureFont =null;
     private const BATTERY_R = 20;
     private const STEPS_R = 30;
+
+    private var weatherWidget = null;
+
     function initialize() {
         WatchFace.initialize();
+        weatherWidget = new JGSFaceWeatherWidget();
     }
 
     // Load your resources here
@@ -23,6 +27,7 @@ class JGSFaceView extends WatchUi.WatchFace {
         weatherFont = WatchUi.loadResource(Rez.Fonts.weatherFont);
         width=dc.getWidth();
 		height=dc.getHeight();
+        weatherWidget.loadResources();
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -43,10 +48,11 @@ class JGSFaceView extends WatchUi.WatchFace {
         updateContouredText(dc, hourString, 0xf8f800, Graphics.COLOR_BLACK, height/4);
         updateContouredText(dc, minString, Graphics.COLOR_WHITE, Graphics.COLOR_LT_GRAY, 3*height/4);
         updateBatteryLevel(dc);
-        updateWeather(dc);
+        //updateWeather(dc);
         updateNotifications(dc);
         var common = new JGSFaceCommon();
         common.drawDateString(dc, width / 6, height/2);
+        weatherWidget.update(dc);
     }
 
     function updateNotifications(dc as Dc){
@@ -59,12 +65,12 @@ class JGSFaceView extends WatchUi.WatchFace {
         
     }
 
-    function updateWeather(dc as Dc){
-        var x = width/6;
-        var y = x+20;
-        var common = new JGSFaceCommon();
-        common.drawWeatherIcon(dc, x, y, 0xf8f800);
-    }
+    // function updateWeather(dc as Dc){
+    //     var x = width/6;
+    //     var y = x+20;
+    //     var common = new JGSFaceCommon();
+    //     common.drawWeatherIcon(dc, x, y, 0xf8f800);
+    // }
 
     function updateContouredText(dc as Dc, text as String, borderColor as Color, color as Color, y as Int) as Void{
         updateTimeLabel(dc, text, borderColor, y, contouredBFont);
@@ -101,6 +107,7 @@ class JGSFaceView extends WatchUi.WatchFace {
         contouredBFont = null;
         weatherFont =null;
         temperatureFont =null;
+        weatherWidget.freeResources();
     }
 
     // The user has just looked at their watch. Timers and animations may be started here.

@@ -1,8 +1,12 @@
 {
-	"folders": [
-		{
-			"name": "JGSFace",
-			"path": "."
-		}
-	]
+  "folders": [
+    {
+      "name": "JGSFace",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  }
 }
