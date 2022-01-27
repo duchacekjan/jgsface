@@ -11,7 +11,7 @@ class JGSFaceProgressWidget {
     private var batteryFont = null;
     
     function initialize(){    
-        x = startX + 35 + 3;
+        x = startX + 35 + 5;
         y = startY - RADIUS_L - 7;
     }
 
