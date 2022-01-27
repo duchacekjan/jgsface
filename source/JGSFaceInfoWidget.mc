@@ -39,7 +39,7 @@ class JGSFaceInfoWidget {
         if(settings.doNotDisturb){
             dc.setColor(neutralColor, Graphics.COLOR_TRANSPARENT);
             dc.drawText(0 + edge, height / 2, iconsFont, "C", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
-            offset = 25;
+            offset = 15;
         }
         return offset;
     }
@@ -64,10 +64,8 @@ class JGSFaceInfoWidget {
         if(heartRate!=null){
             var heartRateText = heartRate.format("%d");
             dc.setColor(hrColor, Graphics.COLOR_TRANSPARENT);
-            var offsetText = 25 + edge;
-            var hrTextWidth = dc.getTextWidthInPixels(heartRateText, infoFont);
-            dc.drawText( width - offsetText, height / 2 , infoFont, heartRateText, Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER);
-            dc.drawText( width - offsetText - hrTextWidth - 2 , height / 2, iconsFont, "B", Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER); // Using Icon
+            dc.drawText( width/2 - edge, height / 2 , infoFont, heartRateText, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText( width/2 + edge, height / 2, iconsFont, "B", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER); // Using Icon
         }
     }
 
