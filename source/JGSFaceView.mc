@@ -12,11 +12,13 @@ class JGSFaceView extends WatchUi.WatchFace {
 
     private var weatherWidget = null;
     private var timeWidget = null;
+    private var dateWidget = null;
 
     function initialize() {
         WatchFace.initialize();
         weatherWidget = new JGSFaceWeatherWidget();
         timeWidget = new JGSFaceTimeWidget();
+        dateWidget = new JGSFaceDateWidget();
     }
 
     // Load your resources here
@@ -27,6 +29,7 @@ class JGSFaceView extends WatchUi.WatchFace {
 		height=dc.getHeight();
         weatherWidget.loadResources();
         timeWidget.loadResources();
+        dateWidget.loadResources();
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -43,10 +46,11 @@ class JGSFaceView extends WatchUi.WatchFace {
 
         updateBatteryLevel(dc);
         updateNotifications(dc);
-        var common = new JGSFaceCommon();
-        common.drawDateString(dc, width / 6, height/2);
+        // var common = new JGSFaceCommon();
+        // common.drawDateString(dc, width / 6, height/2);
         weatherWidget.update(dc);
         timeWidget.update(dc);
+        dateWidget.update(dc);
     }
 
     function updateNotifications(dc as Dc){
@@ -81,6 +85,7 @@ class JGSFaceView extends WatchUi.WatchFace {
         temperatureFont =null;
         weatherWidget.freeResources();
         timeWidget.freeResources();
+        dateWidget.freeResources();
     }
 
     // The user has just looked at their watch. Timers and animations may be started here.

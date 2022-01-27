@@ -1,8 +1,10 @@
 import Toybox.Weather;
 
 class JGSFaceWeatherWidget{
-    private var x = 36;
-    private var y = 65;
+    private const startX = 0;
+    private const startY = 30;
+    private var x;
+    private var y;
     private var radius = 30;
     private var foregroundColor = 0xf8f800;
     private var weatherIconsMap;
@@ -10,7 +12,9 @@ class JGSFaceWeatherWidget{
     private var temperatureFont = null;
     
     function initialize(){
-        weatherIconsMap = new JgsWeatherIconMap();        
+        weatherIconsMap = new JgsWeatherIconMap();  
+        x = startX + radius + 5;
+        y = startY + radius + 5;      
     }
 
     function loadResources(){

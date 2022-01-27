@@ -1,6 +1,6 @@
 class JGSFaceTimeWidget{
     private var x = 240;
-    private var y = 20;
+    private var y = 30;
     private var hoursForegroundColor = Graphics.COLOR_TRANSPARENT;
     private var minsForegroundColor = Graphics.COLOR_LT_GRAY;
     private var hoursBorderColor = 0xf8f800;
@@ -20,8 +20,8 @@ class JGSFaceTimeWidget{
         var clockTime = System.getClockTime();
         var hourString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
         var minString = Lang.format("$1$", [clockTime.min.format("%02d")]);
-        drawContouredText(dc, hourString, hoursBorderColor, hoursForegroundColor, y+55);
-        drawContouredText(dc, minString, minsBorderColor, minsForegroundColor, y+165);
+        drawContouredText(dc, hourString, hoursBorderColor, hoursForegroundColor, y+45);
+        drawContouredText(dc, minString, minsBorderColor, minsForegroundColor, y+155);
     }
 
     function freeResources(){
