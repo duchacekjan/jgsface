@@ -13,7 +13,7 @@ class JGSFaceWeatherWidget{
     
     function initialize(){
         weatherIconsMap = new JgsWeatherIconMap();  
-        x = startX + radius + 5;
+        x = startX + radius + 10;
         y = startY + radius + 5;      
     }
 
