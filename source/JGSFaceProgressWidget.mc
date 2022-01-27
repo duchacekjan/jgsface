@@ -2,10 +2,10 @@ class JGSFaceProgressWidget {
 
     private const startX = 0;
     private const startY = 240;
-    private const RADIUS_S = 20;
-    private const RADIUS_M = 27;
-    private const RADIUS_L = 33;
+    private const RADIUS_S = 22;
+    private const RADIUS_L = 30;
     private const PROGRESS_STROKE = 4;
+    private const MOVE_BAR_COLOR = 0xf8f800;
     private var x;
     private var y;
     private var batteryFont = null;
@@ -32,17 +32,12 @@ class JGSFaceProgressWidget {
          
         updateSteps(dc, activityInfo);
         updateBatteryStatus(dc);
-        drawProgress(dc, RADIUS_M, 50, Graphics.COLOR_GREEN);
-        dc.setPenWidth(1);
-        var font = Graphics.FONT_SYSTEM_XTINY;
-        dc.drawText(x, y, batteryFont, "100", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     private function drawLeads(dc){
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(1);
         dc.drawCircle(x, y, RADIUS_S);
-        dc.drawCircle(x, y, RADIUS_M);
         dc.drawCircle(x, y, RADIUS_L);
     }
 
@@ -59,6 +54,13 @@ class JGSFaceProgressWidget {
         var batteryLevel = getBatteryLevel();
         var color = getBatteryColor(batteryLevel);
         drawProgress(dc, RADIUS_S, batteryLevel, color);
+        dc.setPenWidth(1);
+        var font = Graphics.FONT_SYSTEM_XTINY;
+        var text = batteryLevel.format("%.0d");
+        if(batteryLevel<100){
+            text = text + "%";
+        }
+        dc.drawText(x, y, batteryFont, text, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     private function drawProgress(dc as Dc, radius, percentageProgress, color){
