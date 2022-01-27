@@ -62,7 +62,7 @@ class JGSFaceView extends WatchUi.WatchFace {
         if (notificationCount > 0) {
             dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
             var icons =  Application.loadResource(Rez.Fonts.iconsFont);
-            dc.drawText(5, 15, icons, "B", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(5, 15, icons, "A", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
         }        
     }
 
