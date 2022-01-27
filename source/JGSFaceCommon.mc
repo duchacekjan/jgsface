@@ -4,6 +4,7 @@ class JGSFaceCommon{
         _weatherIconMap = new JgsWeatherIconMap();
     }
     function drawWeatherIcon(dc, x, y, color) {
+        drawWeatherLead(dc, x, y, Graphics.COLOR_DK_GRAY);
 		var clockTime = System.getClockTime();
 		var WeatherFont = Application.loadResource(Rez.Fonts.weatherFont);
         var condition = null;
@@ -23,7 +24,6 @@ class JGSFaceCommon{
             dc.setColor(color, Graphics.COLOR_TRANSPARENT);
             dc.drawText(x, y, WeatherFont, iconCode, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
             
-        drawWeatherLead(dc, x, y, Graphics.COLOR_DK_GRAY);
 	}
 
     function drawDateString( dc, x, y ) {
