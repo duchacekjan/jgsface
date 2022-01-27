@@ -25,10 +25,7 @@ class JGSFaceProgressWidget {
 
     function update(dc){
         drawLeads(dc);
-        var activityInfo = null;
-        if(Toybox.ActivityMonitor has :getInfo){
-            activityInfo = Toybox.ActivityMonitor.getInfo();
-        }
+        var activityInfo = Toybox.ActivityMonitor.getInfo();
          
         updateSteps(dc, activityInfo);
         updateBatteryStatus(dc);
