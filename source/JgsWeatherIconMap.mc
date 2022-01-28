@@ -1,8 +1,7 @@
 import Toybox.Weather;
 
-class JgsWeatherIconMap{
-    function getWeatherIconCode(condition){
-		var clockTime = System.getClockTime();
+module JgsWeatherIconMap{
+    function getWeatherIconCode(condition, clockTime){
 		var isNight = clockTime.hour >= 18 or clockTime.hour < 6;
 		var code;
 		switch(condition){

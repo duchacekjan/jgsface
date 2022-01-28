@@ -1,4 +1,4 @@
-class JGSFaceTimeWidget{
+class JGSFaceTimeWidget extends JGSFaceWidget{
     private var x = 240;
     private var y = 30;
     private var hoursForegroundColor = Graphics.COLOR_TRANSPARENT;
@@ -8,15 +8,16 @@ class JGSFaceTimeWidget{
     private var borderFont = null;
     private var font = null;
     
-    function initialize(){    
+    function initialize(){
+        JGSFaceWidget.initialize();    
     }
 
-    function loadResources(){
+    function loadResourcesCore(){
         borderFont = Application.loadResource(Rez.Fonts.contouredBFont);
         font = Application.loadResource(Rez.Fonts.contouredFont);
     }
 
-    function update(dc, lowPowerMode){
+    function updateCore(dc){
         var clockTime = System.getClockTime();
         var hourString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
         var minString = Lang.format("$1$", [clockTime.min.format("%02d")]);
@@ -24,7 +25,7 @@ class JGSFaceTimeWidget{
         drawContouredText(dc, minString, minsBorderColor, minsForegroundColor, y+155);
     }
 
-    function freeResources(){
+    function freeResourcesCore(){
         borderFont = null;
         font = null;
     }

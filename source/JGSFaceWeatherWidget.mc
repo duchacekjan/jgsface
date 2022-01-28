@@ -1,28 +1,27 @@
 import Toybox.Weather;
 
-class JGSFaceWeatherWidget{
+class JGSFaceWeatherWidget extends JGSFaceWidget{
     private const startX = 0;
     private const startY = 30;
     private var x;
     private var y;
     private var radius = 30;
     private var foregroundColor = 0xf8f800;
-    private var weatherIconsMap;
     private var weatherFont = null;
     private var temperatureFont = null;
     
     function initialize(){
-        weatherIconsMap = new JgsWeatherIconMap();  
+        JGSFaceWidget.initialize();
         x = startX + radius + 10;
         y = startY + radius + 5;      
     }
 
-    function loadResources(){
+    function loadResourcesCore(){
         temperatureFont = Application.loadResource(Rez.Fonts.temperatureFont);
         weatherFont = Application.loadResource(Rez.Fonts.weatherFont);
     }
 
-    function update(dc, lowPowerMode){
+    function updateCore(dc){
         drawLead(dc);
         var weather = null;
         if (Weather has :getCurrentConditions && Weather.getCurrentConditions()!=null) {
@@ -32,8 +31,7 @@ class JGSFaceWeatherWidget{
         drawWeatherIcon(dc, weather);
     }
 
-    function freeResources(){
-        weatherIconsMap = null;
+    function freeResourcesCore(){
         weatherFont = null;
         temperatureFont = null;
     }
@@ -43,7 +41,7 @@ class JGSFaceWeatherWidget{
         if (weather!=null) {
             condition = weather.condition;
         }
-        var iconCode = weatherIconsMap.getWeatherIconCode(condition);
+        var iconCode = JgsWeatherIconMap.getWeatherIconCode(condition, System.getClockTime());
         dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x, y, weatherFont, iconCode, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
     }

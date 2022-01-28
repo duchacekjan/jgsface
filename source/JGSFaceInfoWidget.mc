@@ -1,6 +1,6 @@
 import Toybox.Activity;
 
-class JGSFaceInfoWidget {    
+class JGSFaceInfoWidget extends JGSFaceWidget {    
 
     private const y = 0;
     private const x = 0;
@@ -14,19 +14,20 @@ class JGSFaceInfoWidget {
     private var hrColor = Graphics.COLOR_RED;
     
     function initialize(){    
+        JGSFaceWidget.initialize();
     }
 
-    function loadResources(){
+    function loadResourcesCore(){
         iconsFont = Application.loadResource(Rez.Fonts.iconsFont);
         infoFont = Application.loadResource(Rez.Fonts.infoFont);
     }
 
-    function freeResources(){
+    function freeResourcesCore(){
         iconsFont = null;
         infoFont = null;
     }
 
-    function update(dc, lowPowerMode){
+    function updateCore(dc){
         var settings = System.getDeviceSettings();
         updateNotifications(dc, settings);
         var offset = updateDoNotDisturb(dc, settings);

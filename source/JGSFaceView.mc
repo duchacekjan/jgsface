@@ -10,11 +10,12 @@ class JGSFaceView extends WatchUi.WatchFace {
     private var progressWidget = null;
     private var infoWidget = null;
 
-    private var lowPowerMode;
+    private var inSleepMode;
+    private var isVisible = false;
 
     function initialize() {
         WatchFace.initialize();
-        lowPowerMode = false;
+        inSleepMode = false;
         weatherWidget = new JGSFaceWeatherWidget();
         timeWidget = new JGSFaceTimeWidget();
         dateWidget = new JGSFaceDateWidget();
@@ -24,17 +25,17 @@ class JGSFaceView extends WatchUi.WatchFace {
 
     // Load your resources here
     function onLayout(dc as Dc) as Void {
-        weatherWidget.loadResources();
-        timeWidget.loadResources();
-        dateWidget.loadResources();
-        progressWidget.loadResources();
-        infoWidget.loadResources();
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void { 
+        weatherWidget.loadResources();
+        timeWidget.loadResources();
+        dateWidget.loadResources();
+        progressWidget.loadResources();
+        infoWidget.loadResources();
     }
 
     // Update the view
@@ -43,11 +44,11 @@ class JGSFaceView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
     	dc.clear();
 
-        timeWidget.update(dc, lowPowerMode);
-        dateWidget.update(dc, lowPowerMode);
-        weatherWidget.update(dc, lowPowerMode);
-        progressWidget.update(dc, lowPowerMode);
-        infoWidget.update(dc, lowPowerMode);
+        timeWidget.update(dc, inSleepMode);
+        dateWidget.update(dc, inSleepMode);
+        weatherWidget.update(dc, inSleepMode);
+        progressWidget.update(dc, inSleepMode);
+        infoWidget.update(dc, inSleepMode);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -63,12 +64,12 @@ class JGSFaceView extends WatchUi.WatchFace {
 
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() as Void {
-        lowPowerMode = false;
+        inSleepMode = false;
     }
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() as Void {
-        lowPowerMode = true;
+        inSleepMode = true;
     }
 
 }
