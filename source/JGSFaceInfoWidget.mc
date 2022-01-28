@@ -64,8 +64,8 @@ class JGSFaceInfoWidget {
         if(heartRate!=null){
             var heartRateText = heartRate.format("%d");
             dc.setColor(hrColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText( width/2 - edge, height / 2 , infoFont, heartRateText, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
-            dc.drawText( width/2 + edge, height / 2, iconsFont, "B", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER); // Using Icon
+            dc.drawText( width/2, height / 2, iconsFont, "B", Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER); // Using Icon
+            dc.drawText( width/2 + 2, height / 2 , infoFont, heartRateText, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
         }
     }
 

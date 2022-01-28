@@ -20,7 +20,7 @@ class JGSFaceTimeWidget{
         var clockTime = System.getClockTime();
         var hourString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
         var minString = Lang.format("$1$", [clockTime.min.format("%02d")]);
-        drawContouredText(dc, hourString, hoursBorderColor, hoursForegroundColor, y+45);
+        drawContouredText(dc, hourString, hoursBorderColor, hoursForegroundColor, y+50);
         drawContouredText(dc, minString, minsBorderColor, minsForegroundColor, y+155);
     }
 
@@ -38,6 +38,6 @@ class JGSFaceTimeWidget{
         var justify = Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER;
 
         dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x-1,y,font,text,justify);
+        dc.drawText(x-2,y,font,text,justify);
     }
 }

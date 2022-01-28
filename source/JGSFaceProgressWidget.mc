@@ -12,7 +12,7 @@ class JGSFaceProgressWidget {
     
     function initialize(){    
         x = startX + 35 + 5;
-        y = startY - RADIUS_L - 7;
+        y = startY - RADIUS_L - 10;
     }
 
     function loadResources(){
