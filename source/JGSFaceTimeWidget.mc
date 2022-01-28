@@ -9,7 +9,8 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
     private var font = null;
     
     function initialize(){
-        JGSFaceWidget.initialize();    
+        JGSFaceWidget.initialize();   
+        Toybox.Math.srand(System.getTimer()); 
     }
 
     function loadResourcesCore(){
@@ -52,8 +53,7 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
     }
 
     private function getRandom(){
-        Toybox.Math.srand(System.getTimer());
-        var random = Toybox.Math.rand() % 60;
+        var random = Toybox.Math.rand() % 85;
         var sign = 1;
         if(Toybox.Math.rand() % 2 ==0){
             sign = -1;

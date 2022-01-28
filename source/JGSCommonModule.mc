@@ -1,6 +1,33 @@
 import Toybox.Weather;
 
-module JgsWeatherIconMap{
+module JGSCommonModule{
+	function isInSleepMode(){
+		return false;
+		//TODO Disabled for now.
+		var userProfile = Toybox.UserProfile.getProfile();
+
+		var oToday = Toybox.Time.today();
+		var oSleepTime = userProfile.sleepTime;
+		var oWakeTime = userProfile.wakeTime;
+		var oNow = Toybox.Time.now();
+		var oneDay = new Toybox.Time.Duration(24*60*60);
+
+		var wakeTime = oToday.add(oWakeTime);
+		var shouldAddDay = oWakeTime.lessThan(oSleepTime);
+		if(shouldAddDay){
+			wakeTime = wakeTime.add(oneDay);
+		}
+		var sleepTime = oToday.add(oSleepTime);
+
+		var currentTime = Toybox.Time.now();
+		if(currentTime.lessThan(sleepTime) && shouldAddDay){
+			currentTime = currentTime.add(oneDay);
+		}
+
+		return currentTime.greaterThan(sleepTime) &&
+			   currentTime.lessThan(wakeTime);
+	}
+
     function getWeatherIconCode(condition, clockTime){
 		var isNight = clockTime.hour >= 18 or clockTime.hour < 6;
 		var code;
