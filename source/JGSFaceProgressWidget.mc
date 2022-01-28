@@ -1,5 +1,4 @@
-class JGSFaceProgressWidget {    
-
+class JGSFaceProgressWidget extends JGSFaceWidget{
     private const startX = 0;
     private const startY = 240;
     private const RADIUS_S = 22;
@@ -11,19 +10,20 @@ class JGSFaceProgressWidget {
     private var batteryFont = null;
     
     function initialize(){    
+        JGSFaceWidget.initialize();
         x = startX + 35 + 5;
         y = startY - RADIUS_L - 10;
     }
 
-    function loadResources(){
+    function loadResourcesCore(){
         batteryFont = Application.loadResource(Rez.Fonts.temperatureFont);
     }
 
-    function freeResources(){
+    function freeResourcesCore(){
         batteryFont = null;
     }
 
-    function update(dc){
+    function updateCore(dc){
         drawLeads(dc);
         var activityInfo = Toybox.ActivityMonitor.getInfo();
          

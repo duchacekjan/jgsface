@@ -1,4 +1,4 @@
-class JGSFaceTimeWidget{
+class JGSFaceTimeWidget extends JGSFaceWidget{
     private var x = 240;
     private var y = 30;
     private var hoursForegroundColor = Graphics.COLOR_TRANSPARENT;
@@ -8,15 +8,17 @@ class JGSFaceTimeWidget{
     private var borderFont = null;
     private var font = null;
     
-    function initialize(){    
+    function initialize(){
+        JGSFaceWidget.initialize();   
+        Toybox.Math.srand(System.getTimer()); 
     }
 
-    function loadResources(){
+    function loadResourcesCore(){
         borderFont = Application.loadResource(Rez.Fonts.contouredBFont);
         font = Application.loadResource(Rez.Fonts.contouredFont);
     }
 
-    function update(dc){
+    function updateCore(dc){
         var clockTime = System.getClockTime();
         var hourString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
         var minString = Lang.format("$1$", [clockTime.min.format("%02d")]);
@@ -24,7 +26,16 @@ class JGSFaceTimeWidget{
         drawContouredText(dc, minString, minsBorderColor, minsForegroundColor, y+155);
     }
 
-    function freeResources(){
+    function updateInLowPowerMode(dc){
+        var clockTime = System.getClockTime();
+        var text = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
+        var xOffset = getRandom();
+        var yOffset = getRandom();
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(120 + xOffset, 120 + yOffset, Graphics.FONT_NUMBER_MILD, text, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+    }
+
+    function freeResourcesCore(){
         borderFont = null;
         font = null;
     }
@@ -39,5 +50,14 @@ class JGSFaceTimeWidget{
 
         dc.setColor(color, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x-2,y,font,text,justify);
+    }
+
+    private function getRandom(){
+        var random = Toybox.Math.rand() % 85;
+        var sign = 1;
+        if(Toybox.Math.rand() % 2 ==0){
+            sign = -1;
+        }
+        return Toybox.Math.round(sign * random);
     }
 }
