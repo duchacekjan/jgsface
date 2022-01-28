@@ -7,8 +7,6 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
     private var minsBorderColor = Graphics.COLOR_WHITE;
     private var borderFont = null;
     private var font = null;
-    private var xOffset = -2;
-    private var horizontalJustification = Graphics.TEXT_JUSTIFY_RIGHT;
     
     function initialize(){
         JGSFaceWidget.initialize();    
@@ -20,8 +18,6 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
     }
 
     function updateCore(dc){
-        xOffset = -2;
-        horizontalJustification = Graphics.TEXT_JUSTIFY_RIGHT;
         var clockTime = System.getClockTime();
         var hourString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
         var minString = Lang.format("$1$", [clockTime.min.format("%02d")]);
@@ -30,13 +26,12 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
     }
 
     function updateInLowPowerMode(dc){
-        xOffset = -120;
-        horizontalJustification = Graphics.TEXT_JUSTIFY_CENTER;
         var clockTime = System.getClockTime();
-        var hourString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
-        var minString = Lang.format("$1$", [clockTime.min.format("%02d")]);
-        drawContouredText(dc, hourString, Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT, y+50);
-        drawContouredText(dc, minString, Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT, y+155);
+        var text = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
+        var xOffset = getRandom();
+        var yOffset = getRandom();
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(120 + xOffset, 120 + yOffset, Graphics.FONT_NUMBER_MILD, text, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     function freeResourcesCore(){
@@ -50,9 +45,19 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
     }
 
     private function drawColoredText(dc, text, color, y, font){
-        var justify = horizontalJustification|Graphics.TEXT_JUSTIFY_VCENTER;
+        var justify = Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER;
 
         dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x+xOffset,y,font,text,justify);
+        dc.drawText(x-2,y,font,text,justify);
+    }
+
+    private function getRandom(){
+        Toybox.Math.srand(System.getTimer());
+        var random = Toybox.Math.rand() % 60;
+        var sign = 1;
+        if(Toybox.Math.rand() % 2 ==0){
+            sign = -1;
+        }
+        return Toybox.Math.round(sign * random);
     }
 }
