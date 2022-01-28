@@ -22,7 +22,7 @@ class JGSFaceWeatherWidget{
         weatherFont = Application.loadResource(Rez.Fonts.weatherFont);
     }
 
-    function update(dc){
+    function update(dc, lowPowerMode){
         drawLead(dc);
         var weather = null;
         if (Weather has :getCurrentConditions && Weather.getCurrentConditions()!=null) {

@@ -23,7 +23,7 @@ class JGSFaceProgressWidget {
         batteryFont = null;
     }
 
-    function update(dc){
+    function update(dc, lowPowerMode){
         drawLeads(dc);
         var activityInfo = Toybox.ActivityMonitor.getInfo();
          

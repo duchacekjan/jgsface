@@ -26,7 +26,7 @@ class JGSFaceInfoWidget {
         infoFont = null;
     }
 
-    function update(dc){
+    function update(dc, lowPowerMode){
         var settings = System.getDeviceSettings();
         updateNotifications(dc, settings);
         var offset = updateDoNotDisturb(dc, settings);

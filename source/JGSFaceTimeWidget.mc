@@ -16,7 +16,7 @@ class JGSFaceTimeWidget{
         font = Application.loadResource(Rez.Fonts.contouredFont);
     }
 
-    function update(dc){
+    function update(dc, lowPowerMode){
         var clockTime = System.getClockTime();
         var hourString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
         var minString = Lang.format("$1$", [clockTime.min.format("%02d")]);

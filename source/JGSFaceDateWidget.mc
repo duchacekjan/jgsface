@@ -13,7 +13,7 @@ class JGSFaceDateWidget{
     function loadResources(){
     }
 
-    function update(dc){
+    function update(dc, lowPowerMode){
         var info = Time.Gregorian.info(Time.now(), Time.FORMAT_LONG);
         var dateStr = Lang.format("$1$ $2$", [info.month, info.day]);
         dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);

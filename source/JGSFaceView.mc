@@ -10,8 +10,11 @@ class JGSFaceView extends WatchUi.WatchFace {
     private var progressWidget = null;
     private var infoWidget = null;
 
+    private var lowPowerMode;
+
     function initialize() {
         WatchFace.initialize();
+        lowPowerMode = false;
         weatherWidget = new JGSFaceWeatherWidget();
         timeWidget = new JGSFaceTimeWidget();
         dateWidget = new JGSFaceDateWidget();
@@ -40,11 +43,11 @@ class JGSFaceView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
     	dc.clear();
 
-        timeWidget.update(dc);
-        dateWidget.update(dc);
-        weatherWidget.update(dc);
-        progressWidget.update(dc);
-        infoWidget.update(dc);
+        timeWidget.update(dc, lowPowerMode);
+        dateWidget.update(dc, lowPowerMode);
+        weatherWidget.update(dc, lowPowerMode);
+        progressWidget.update(dc, lowPowerMode);
+        infoWidget.update(dc, lowPowerMode);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -60,10 +63,12 @@ class JGSFaceView extends WatchUi.WatchFace {
 
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() as Void {
+        lowPowerMode = false;
     }
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() as Void {
+        lowPowerMode = true;
     }
 
 }
