@@ -4,23 +4,27 @@ import Toybox.System;
 import Toybox.WatchUi;
 
 class JGSFaceView extends WatchUi.WatchFace {
-    private var weatherWidget = null;
-    private var timeWidget = null;
-    private var dateWidget = null;
-    private var progressWidget = null;
-    private var infoWidget = null;
+    enum {
+        W_Weather = 0,
+        W_Time = 1,
+        W_Date = 2,
+        W_Progress = 3,
+        W_Info = 4
+    }
 
     private var inSleepMode;
     private var isVisible = false;
+    private var widgets;
 
     function initialize() {
         WatchFace.initialize();
         inSleepMode = false;
-        weatherWidget = new JGSFaceWeatherWidget();
-        timeWidget = new JGSFaceTimeWidget();
-        dateWidget = new JGSFaceDateWidget();
-        progressWidget = new JGSFaceProgressWidget();
-        infoWidget =new JGSFaceInfoWidget();
+        widgets = new [5];
+        widgets[W_Weather] = new JGSFaceWeatherWidget();
+        widgets[W_Time] = new JGSFaceTimeWidget();
+        widgets[W_Date] = new JGSFaceDateWidget();
+        widgets[W_Progress] = new JGSFaceProgressWidget();
+        widgets[W_Info] = new JGSFaceInfoWidget();
     }
 
     // Load your resources here
@@ -31,11 +35,10 @@ class JGSFaceView extends WatchUi.WatchFace {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void { 
-        weatherWidget.loadResources();
-        timeWidget.loadResources();
-        dateWidget.loadResources();
-        progressWidget.loadResources();
-        infoWidget.loadResources();
+        for(var i = 0; i < widgets.size();i += 1){
+            var widget = widgets[i] as JGSFaceWidget;
+            widget.loadResources();
+        }
     }
 
     // Update the view
@@ -44,22 +47,20 @@ class JGSFaceView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
     	dc.clear();
 
-        timeWidget.update(dc, inSleepMode);
-        dateWidget.update(dc, inSleepMode);
-        weatherWidget.update(dc, inSleepMode);
-        progressWidget.update(dc, inSleepMode);
-        infoWidget.update(dc, inSleepMode);
+        for(var i = 0; i < widgets.size(); i += 1){
+            var widget = widgets[i] as JGSFaceWidget;
+            widget.update(dc, inSleepMode);
+        }
     }
 
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() as Void {
-        weatherWidget.freeResources();
-        timeWidget.freeResources();
-        dateWidget.freeResources();
-        progressWidget.freeResources();
-        infoWidget.freeResources();
+        for(var i = 0; i < widgets.size(); i += 1){
+            var widget = widgets[i] as JGSFaceWidget;
+            widget.freeResources();
+        }
     }
 
     // The user has just looked at their watch. Timers and animations may be started here.
