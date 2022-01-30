@@ -87,10 +87,10 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
 
     private function getBatteryColor(progressValue){
         var result;
-        if (progressValue <= 10){
+        if (progressValue < 15){
             result = Graphics.COLOR_DK_RED;
-        } else if (progressValue <= 40){
-            result = Graphics.COLOR_DK_BLUE;
+        } else if (progressValue < 30){
+            result = Graphics.COLOR_ORANGE;
         } else {
             result = Graphics.COLOR_DK_GREEN;
         }
