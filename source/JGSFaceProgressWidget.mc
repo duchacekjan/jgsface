@@ -43,14 +43,22 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
         if(activityInfo!=null){
             stepsProgress = getStepsProgress(activityInfo);
         }
-        var color = getStepsColor();
-        drawProgress(dc, RADIUS_L, stepsProgress, color);
+
+        if(stepsProgress<=100){
+            drawProgress(dc, RADIUS_L, stepsProgress, Graphics.COLOR_BLUE, PROGRESS_STROKE);
+        }else if (stepsProgress<=200){
+            drawProgress(dc, RADIUS_L, 100, Graphics.COLOR_DK_BLUE, PROGRESS_STROKE);
+            drawProgress(dc, RADIUS_L, stepsProgress-100, Graphics.COLOR_BLUE, PROGRESS_STROKE);
+        }else {
+            drawProgress(dc, RADIUS_L, 100, Graphics.COLOR_DK_GREEN, PROGRESS_STROKE);
+            drawProgress(dc, RADIUS_L, stepsProgress-200, Graphics.COLOR_BLUE, PROGRESS_STROKE);
+        }
     }
 
     private function updateBatteryStatus(dc){
         var batteryLevel = getBatteryLevel();
         var color = getBatteryColor(batteryLevel);
-        drawProgress(dc, RADIUS_S, batteryLevel, color);
+        drawProgress(dc, RADIUS_S, batteryLevel, color, PROGRESS_STROKE);
         dc.setPenWidth(1);
         var font = Graphics.FONT_SYSTEM_XTINY;
         var text = batteryLevel.format("%.0d");
@@ -60,25 +68,23 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
         dc.drawText(x, y, batteryFont, text, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
-    private function drawProgress(dc as Dc, radius, percentageProgress, color){
+    private function drawProgress(dc as Dc, radius, percentageProgress, color, stroke){
         var progressValue = percentageProgress;
         if (percentageProgress > 100.0){
             progressValue = 100.0;
+        }else if(percentageProgress<1){
+            return;
         }
         var progressLevel = (360 * progressValue/100.0).toNumber();
         dc.setColor(color, Graphics.COLOR_TRANSPARENT);
         var topLevel = 90.0;
-        dc.setPenWidth(PROGRESS_STROKE);
+        dc.setPenWidth(stroke);
         var arcEnd = topLevel - progressLevel;
         if (arcEnd < 0) {
             arcEnd = 360 + arcEnd;
         }
         var arc = Graphics.ARC_CLOCKWISE;
         dc.drawArc(x, y, radius, arc, topLevel, arcEnd);
-    }
-
-    private function getStepsColor(){
-        return Graphics.COLOR_BLUE;
     }
 
     private function getStepsProgress(activityInfo){
