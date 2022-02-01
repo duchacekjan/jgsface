@@ -91,7 +91,7 @@ class Temperature{
 
     function getText(){
         if (isAssigned){
-            var format = "$1$°$2$";
+            var format = " $1$°$2$";
             var args = [value.format("%d"), unit];
             return Lang.format(format, args);
         } else {
