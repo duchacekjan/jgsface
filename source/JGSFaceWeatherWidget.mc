@@ -63,13 +63,16 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
     private function getTemperature(weather){
         var temp = null;
         var units="";
-        if (System.getDeviceSettings().temperatureUnits == System.UNIT_METRIC) { 
-            units = "°C";
-            temp = weather.temperature;
-        }	else {
-            temp = (weather.temperature * 9/5) + 32; 
-            units = "°F";
-        }	
+        if(weather has :temperature){
+            if (System.getDeviceSettings().temperatureUnits == System.UNIT_METRIC) { 
+                units = "°C";
+                temp = weather.temperature;
+            }	else {
+                temp = (weather.temperature * 9/5) + 32; 
+                units = "°F";
+            }	
+        }
+        
         if (temp != null && temp instanceof Number) {
             return temp.format("%.0d")+units;
         } else {
