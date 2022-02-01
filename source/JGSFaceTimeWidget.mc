@@ -1,7 +1,7 @@
 class JGSFaceTimeWidget extends JGSFaceWidget{
     private var x = 240;
     private var y = 30;
-    private var hoursForegroundColor = Graphics.COLOR_TRANSPARENT;
+    private var hoursForegroundColor = Colors.EMPTY;
     private var minsForegroundColor = Graphics.COLOR_LT_GRAY;
     private var hoursBorderColor = 0xf8f800;
     private var minsBorderColor = Graphics.COLOR_WHITE;
@@ -22,8 +22,8 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
         var clockTime = System.getClockTime();
         var hourString = Lang.format("$1$", [clockTime.hour.format("%02d")]);
         var minString = Lang.format("$1$", [clockTime.min.format("%02d")]);
-        drawContouredText(dc, hourString, hoursBorderColor, hoursForegroundColor, y+50);
-        drawContouredText(dc, minString, minsBorderColor, minsForegroundColor, y+155);
+        drawContouredText(dc, hourString, Colors.TIME_HRS, y+50);
+        drawContouredText(dc, minString, Colors.TIME_MINS, y+155);
     }
 
     function updateInLowPowerMode(dc){
@@ -31,8 +31,8 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
         var text = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
         var xOffset = getRandom();
         var yOffset = getRandom();
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(120 + xOffset, 120 + yOffset, Graphics.FONT_NUMBER_MILD, text, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.setColor(Colors.TIME_MINS.foreground, Colors.EMPTY);
+        dc.drawText(120 + xOffset, 120 + yOffset, Graphics.FONT_NUMBER_MILD, text, TextJustification.CC);
     }
 
     function freeResourcesCore(){
@@ -40,16 +40,14 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
         font = null;
     }
 
-    private function drawContouredText(dc, text, borderColor, color, y){
-        drawColoredText(dc, text, borderColor, y, borderFont);
-        drawColoredText(dc, text, color, y, font);
+    private function drawContouredText(dc, text, color as ClockColors, y){
+        drawColoredText(dc, text, color.border, y, borderFont);
+        drawColoredText(dc, text, color.foreground, y, font);
     }
 
     private function drawColoredText(dc, text, color, y, font){
-        var justify = Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER;
-
-        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x-2,y,font,text,justify);
+        dc.setColor(color, Colors.EMPTY);
+        dc.drawText(x-2,y,font,text,TextJustification.RC);
     }
 
     private function getRandom(){

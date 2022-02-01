@@ -43,18 +43,18 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
             condition = weather.condition;
         }
         var iconCode = JGSCommonModule.getWeatherIconCode(condition, System.getClockTime());
-        dc.setColor(foregroundColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(x, y, weatherFont, iconCode, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.setColor(Colors.WEATHER, Colors.EMPTY);
+        dc.drawText(x, y, weatherFont, iconCode, TextJustification.CC);
     }
 
     private function drawTemperature(dc, weather){
         var temperature = getTemperature(weather);
-        dc.setColor(foregroundColor, Graphics.COLOR_BLACK);
-        dc.drawText(x+radius, y-radius, smallFont, temperature.getText(), Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.setColor(Colors.WEATHER, Colors.BACKGROUND);
+        dc.drawText(x+radius, y-radius, smallFont, temperature.getText(), TextJustification.RC);
     }
 
     private function drawLead(dc){
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(Colors.LEAD, Colors.EMPTY);
         dc.setPenWidth(1);
         dc.drawCircle(x, y, radius);
     }

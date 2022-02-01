@@ -9,9 +9,6 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
     private const edge = 10;
     private var iconsFont = null;
     private var infoFont = null;
-    private var neutralColor = Graphics.COLOR_LT_GRAY;
-    private var notificationColor = Graphics.COLOR_GREEN;
-    private var hrColor = Graphics.COLOR_RED;
     
     function initialize(){    
         JGSFaceWidget.initialize();
@@ -38,8 +35,8 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
     private function updateDoNotDisturb(dc, settings){
         var offset = 0;
         if(settings.doNotDisturb){
-            dc.setColor(neutralColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(0 + edge, height / 2, iconsFont, "C", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.setColor(Colors.INFO_BASE, Colors.EMPTY);
+            dc.drawText(0 + edge, height / 2, iconsFont, "C", TextJustification.LC);
             offset = 15;
         }
         return offset;
@@ -47,16 +44,16 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
 
     private function updateAlarmClock(dc, settings, offset){
         if(settings.alarmCount>0){
-            dc.setColor(neutralColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(0 + edge + offset, height / 2, iconsFont, "D", Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.setColor(Colors.INFO_BASE, Colors.EMPTY);
+            dc.drawText(0 + edge + offset, height / 2, iconsFont, "D", TextJustification.LC);
         }
     }
 
     private function updateNotifications(dc, settings){
         var notificationCount = settings.notificationCount;
         if (notificationCount > 0) {
-            dc.setColor(notificationColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(width - edge, height / 2, iconsFont, "A", Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.setColor(Colors.INFO_NOTIFICATION, Colors.EMPTY);
+            dc.drawText(width - edge, height / 2, iconsFont, "A", TextJustification.RC);
         }  
     }
 
@@ -64,9 +61,9 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
         var heartRate = getHeartRate();
         if(heartRate!=null){
             var heartRateText = heartRate.format("%d");
-            dc.setColor(hrColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText( width/2, height / 2, iconsFont, "B", Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER); // Using Icon
-            dc.drawText( width/2 + 2, height / 2 , infoFont, heartRateText, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.setColor(Colors.INFO_HR, Colors.EMPTY);
+            dc.drawText( width/2, height / 2, iconsFont, "B", TextJustification.RC); 
+            dc.drawText( width/2 + 2, height / 2 , infoFont, heartRateText, TextJustification.LC);
         }
     }
 

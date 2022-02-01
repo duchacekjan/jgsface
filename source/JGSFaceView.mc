@@ -44,7 +44,7 @@ class JGSFaceView extends WatchUi.WatchFace {
     // Update the view
     function onUpdate(dc as Dc) as Void {
 
-        dc.setColor(Graphics.COLOR_BLACK,Graphics.COLOR_BLACK);
+        dc.setColor(Colors.BACKGROUND,Colors.BACKGROUND);
     	dc.clear();
 
         for(var i = 0; i < widgets.size(); i += 1){

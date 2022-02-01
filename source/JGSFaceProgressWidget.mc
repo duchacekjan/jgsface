@@ -4,7 +4,6 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
     private const RADIUS_S = 22;
     private const RADIUS_L = 30;
     private const PROGRESS_STROKE = 4;
-    private const MOVE_BAR_COLOR = 0xf8f800;
     private var x;
     private var y;
     private var smallFont = null;
@@ -32,7 +31,7 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
     }
 
     private function drawLeads(dc){
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(Colors.LEAD, Colors.EMPTY);
         dc.setPenWidth(1);
         dc.drawCircle(x, y, RADIUS_S);
         dc.drawCircle(x, y, RADIUS_L);
@@ -45,13 +44,13 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
         }
 
         if(stepsProgress<=100){
-            drawProgress(dc, RADIUS_L, stepsProgress, Graphics.COLOR_BLUE, PROGRESS_STROKE);
+            drawProgress(dc, RADIUS_L, stepsProgress, Colors.STEPS_UP_TO_100, PROGRESS_STROKE);
         }else if (stepsProgress<=200){
-            drawProgress(dc, RADIUS_L, 100, Graphics.COLOR_DK_BLUE, PROGRESS_STROKE);
-            drawProgress(dc, RADIUS_L, stepsProgress-100, Graphics.COLOR_BLUE, PROGRESS_STROKE);
+            drawProgress(dc, RADIUS_L, 100, Colors.STEPS_UP_TO_200, PROGRESS_STROKE);
+            drawProgress(dc, RADIUS_L, stepsProgress-100, Colors.STEPS_UP_TO_100, PROGRESS_STROKE);
         }else {
-            drawProgress(dc, RADIUS_L, 100, Graphics.COLOR_DK_GREEN, PROGRESS_STROKE);
-            drawProgress(dc, RADIUS_L, stepsProgress-200, Graphics.COLOR_BLUE, PROGRESS_STROKE);
+            drawProgress(dc, RADIUS_L, 100, Colors.STEPS_OVER_200, PROGRESS_STROKE);
+            drawProgress(dc, RADIUS_L, stepsProgress-200, Colors.STEPS_UP_TO_100, PROGRESS_STROKE);
         }
     }
 
@@ -65,7 +64,7 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
         if(batteryLevel<100){
             text = text + "%";
         }
-        dc.drawText(x, y, smallFont, text, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x, y, smallFont, text, TextJustification.CC);
     }
 
     private function drawProgress(dc as Dc, radius, percentageProgress, color, stroke){
@@ -76,7 +75,7 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
             return;
         }
         var progressLevel = (360 * progressValue/100.0).toNumber();
-        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(color, Colors.EMPTY);
         var topLevel = 90.0;
         dc.setPenWidth(stroke);
         var arcEnd = topLevel - progressLevel;
@@ -94,11 +93,11 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
     private function getBatteryColor(progressValue){
         var result;
         if (progressValue < 15){
-            result = Graphics.COLOR_DK_RED;
+            result = Colors.BATTERY_LOW;
         } else if (progressValue < 30){
-            result = Graphics.COLOR_ORANGE;
+            result = Colors.BATTERY_MID;
         } else {
-            result = Graphics.COLOR_DK_GREEN;
+            result = Colors.BATTERY_HIGH;
         }
         return result;
     }
