@@ -95,7 +95,7 @@ class Temperature{
             var args = [value.format("%d"), unit];
             return Lang.format(format, args);
         } else {
-            return "N/A";
+            return " N/A";
         }
     }
 }
