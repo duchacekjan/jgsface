@@ -1,4 +1,5 @@
 import Toybox.Weather;
+import Toybox.Lang;
 
 class JGSFaceWeatherWidget extends JGSFaceWidget{
     private const startX = 0;
@@ -48,9 +49,9 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
 
     private function drawTemperature(dc, weather){
         var temperature = getTemperature(weather);
-        if (temperature!=null && temperature instanceof String) {
+        if (temperature.isAssigned) {
             dc.setColor(foregroundColor, Graphics.COLOR_BLACK);
-            dc.drawText(x+radius, y-radius, temperatureFont, temperature, Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(x+radius, y-radius, temperatureFont, temperature.getText(), Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER);
         }
     }
 
@@ -61,22 +62,47 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
     }
 
     private function getTemperature(weather){
-        var temp = null;
-        var units="";
+        var result = new Temperature(null);
         if(weather has :temperature){
-            if (System.getDeviceSettings().temperatureUnits == System.UNIT_METRIC) { 
-                units = "°C";
-                temp = weather.temperature;
-            }	else {
-                temp = (weather.temperature * 9/5) + 32; 
-                units = "°F";
-            }	
+            result = new Temperature(weather.temperature);
+        } else if(weather has :feelsLikeTemperature){
+            result = new Temperature(weather.feelsLikeTemperature);
+        }
+        return result;
+    }
+}
+
+class Temperature{
+    function initialize(temperature){
+        if(isAssignedCore(temperature)){
+            var targetUnit = System.getDeviceSettings().temperatureUnits;
+            if(targetUnit==System.UNIT_METRIC){
+                value = temperature;
+                unit = "C";
+            }else{
+                value =  (temperature * 9.0/5.0) + 32;            
+                unit = "F";
+            }
+            isAssigned = true;
         }
         
-        if (temp != null && temp instanceof Number) {
-            return temp.format("%.0d")+units;
+    }
+
+    var value = null;
+    var unit = null;
+    var isAssigned = false;
+
+    function getText(){
+        if(isAssigned){
+            var format = "$1$°$2$";
+            var args = [value.format("%d"), unit];
+            return Lang.format(format, args);
         } else {
-            return null;
+            return "";
         }
+    }
+
+    private function isAssignedCore(temperature){
+        return (temperature !=null and (temperature instanceof Number));
     }
 }
