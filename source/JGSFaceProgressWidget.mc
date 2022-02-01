@@ -7,7 +7,7 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
     private const MOVE_BAR_COLOR = 0xf8f800;
     private var x;
     private var y;
-    private var batteryFont = null;
+    private var smallFont = null;
     
     function initialize(){    
         JGSFaceWidget.initialize();
@@ -16,11 +16,11 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
     }
 
     function loadResourcesCore(){
-        batteryFont = Application.loadResource(Rez.Fonts.temperatureFont);
+        smallFont = Application.loadResource(Rez.Fonts.smallFont);
     }
 
     function freeResourcesCore(){
-        batteryFont = null;
+        smallFont = null;
     }
 
     function updateCore(dc){
@@ -65,7 +65,7 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
         if(batteryLevel<100){
             text = text + "%";
         }
-        dc.drawText(x, y, batteryFont, text, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(x, y, smallFont, text, Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     private function drawProgress(dc as Dc, radius, percentageProgress, color, stroke){

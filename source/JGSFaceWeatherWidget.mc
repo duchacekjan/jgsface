@@ -9,7 +9,7 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
     private var radius = 30;
     private var foregroundColor = 0xf8f800;
     private var weatherFont = null;
-    private var temperatureFont = null;
+    private var smallFont = null;
     
     function initialize(){
         JGSFaceWidget.initialize();
@@ -18,7 +18,7 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
     }
 
     function loadResourcesCore(){
-        temperatureFont = Application.loadResource(Rez.Fonts.temperatureFont);
+        smallFont = Application.loadResource(Rez.Fonts.smallFont);
         weatherFont = Application.loadResource(Rez.Fonts.weatherFont);
     }
 
@@ -34,7 +34,7 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
 
     function freeResourcesCore(){
         weatherFont = null;
-        temperatureFont = null;
+        smallFont = null;
     }
 
     private function drawWeatherIcon(dc, weather){
@@ -49,10 +49,8 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
 
     private function drawTemperature(dc, weather){
         var temperature = getTemperature(weather);
-        if (temperature.isAssigned) {
-            dc.setColor(foregroundColor, Graphics.COLOR_BLACK);
-            dc.drawText(x+radius, y-radius, temperatureFont, temperature.getText(), Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER);
-        }
+        dc.setColor(foregroundColor, Graphics.COLOR_BLACK);
+        dc.drawText(x+radius, y-radius, smallFont, temperature.getText(), Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER);
     }
 
     private function drawLead(dc){
@@ -74,7 +72,7 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
 
 class Temperature{
     function initialize(temperature){
-        if(isAssignedCore(temperature)){
+        if (temperature != null and (temperature instanceof Number)){
             var targetUnit = System.getDeviceSettings().temperatureUnits;
             if(targetUnit==System.UNIT_METRIC){
                 value = temperature;
@@ -84,25 +82,20 @@ class Temperature{
                 unit = "F";
             }
             isAssigned = true;
-        }
-        
+        }        
     }
 
     var value = null;
     var unit = null;
-    var isAssigned = false;
+    private var isAssigned = false;
 
     function getText(){
-        if(isAssigned){
+        if (isAssigned){
             var format = "$1$°$2$";
             var args = [value.format("%d"), unit];
             return Lang.format(format, args);
         } else {
-            return "";
+            return "N/A";
         }
-    }
-
-    private function isAssignedCore(temperature){
-        return (temperature !=null and (temperature instanceof Number));
     }
 }

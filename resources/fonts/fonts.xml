@@ -1,9 +1,8 @@
 <fonts>
     <font id="contouredFont" filename="contoured.fnt" filter="0123456789" antialias="true"/>
     <font id="contouredBFont" filename="contoured_border.fnt" filter="0123456789" antialias="true"/>
-    <font id="temperatureFont" filename="temperature.fnt" antialias="true" filter="-0123456789°CF%"/>
     <font id="weatherFont" filename="weather-icons-jgs.fnt" antialias="true"/>
-    <font id="batteryFont" filename="battery-font-jgs.fnt" antialias="true" filter="-0123456789°CF%"/>
+    <font id="smallFont" filename="small-jgs-font.fnt" antialias="true" filter="-0123456789°CF%NA/"/>
     <font id="iconsFont" filename="icons-jgs.fnt" antialias="true" filter="ABCDE"/>
     <font id="infoFont" filename="info-jgs.fnt" antialias="true" filter="0123456789"/>
 </fonts>
