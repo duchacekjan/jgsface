@@ -1,6 +1,6 @@
 import Toybox.Weather;
 
-module JGSCommonModule{
+module Common{
 	function isInSleepMode(){
 		return false;
 		//TODO Disabled for now.

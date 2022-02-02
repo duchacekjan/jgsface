@@ -42,7 +42,7 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
         if (weather!=null) {
             condition = weather.condition;
         }
-        var iconCode = JGSCommonModule.getWeatherIconCode(condition, System.getClockTime());
+        var iconCode = Common.getWeatherIconCode(condition, System.getClockTime());
         dc.setColor(Colors.WEATHER, Colors.EMPTY);
         dc.drawText(x, y, weatherFont, iconCode, TextJustification.CC);
     }

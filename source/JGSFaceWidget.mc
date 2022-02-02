@@ -17,7 +17,7 @@ class JGSFaceWidget{
             return;
         }
 
-        if(isLowPowerMode || JGSCommonModule.isInSleepMode()){
+        if(isLowPowerMode || Common.isInSleepMode()){
             updateInLowPowerMode(dc);
         }else{
             updateCore(dc);
