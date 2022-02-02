@@ -9,7 +9,7 @@ class JGSFaceWidgets{
         mWidgets[2] = new JGSFaceDateWidget();
         mWidgets[3] = new JGSFaceProgressWidget();
         mWidgets[4] = new JGSFaceInfoWidget();
-        //mWidgets[5] = new JGSFaceChargingWidget(); TODO
+        mWidgets[5] = new JGSFaceChargingWidget();
     }
 
     function loadResources(){
@@ -26,15 +26,18 @@ class JGSFaceWidgets{
 
     function update(dc, inLowPowerMode){
         for(var i = 0; i < mWidgets.size();i += 1){
-            var widget = mWidgets[i];
-            if(widget !=null and (widget instanceof JGSFaceWidget)){
-                widget.update(dc, inLowPowerMode);
-            }
+            updateWidget(mWidgets[i], dc, inLowPowerMode);
         }
     }
 
     function freeResources(){
         isVisible = false;
         Fonts.freeFonts();
+    }
+
+    private function updateWidget(widget, dc, inLowPowerMode){
+        if(widget !=null and (widget instanceof JGSFaceWidget)){
+            widget.update(dc, inLowPowerMode);
+        }
     }
 }

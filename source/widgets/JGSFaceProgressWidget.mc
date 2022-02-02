@@ -46,8 +46,8 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
     }
 
     private function updateBatteryStatus(dc){
-        var batteryLevel = getBatteryLevel();
-        var color = getBatteryColor(batteryLevel);
+        var batteryLevel = System.getSystemStats().battery;
+        var color = Common.getBatteryColor(batteryLevel);
         drawProgress(dc, RADIUS_S, batteryLevel, color, PROGRESS_STROKE);
         dc.setPenWidth(1);
         var font = Graphics.FONT_SYSTEM_XTINY;
@@ -79,21 +79,5 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
 
     private function getStepsProgress(activityInfo){
         return 100.0 * activityInfo.steps.toFloat() / activityInfo.stepGoal.toFloat();
-    }
-
-    private function getBatteryColor(progressValue){
-        var result;
-        if (progressValue < 15){
-            result = Colors.BATTERY_LOW;
-        } else if (progressValue < 30){
-            result = Colors.BATTERY_MID;
-        } else {
-            result = Colors.BATTERY_HIGH;
-        }
-        return result;
-    }
-
-    private function getBatteryLevel(){
-        return System.getSystemStats().battery;
     }
 }

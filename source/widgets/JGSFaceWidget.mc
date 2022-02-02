@@ -1,19 +1,20 @@
 class JGSFaceWidget{    
-    protected var isLowPowerMode = false;
-
     function initialize(){  
     }
 
-    function update(dc, isLowPowerMode){
-        isLowPowerMode = isLowPowerMode;
+    function update(dc, inLowPowerMode){
         if(!Common.Widgets.isVisible){
             return;
         }
-
-        if(isLowPowerMode || Common.isInSleepMode()){
+        
+        if(inLowPowerMode){
             updateInLowPowerMode(dc);
         }else{
-            updateCore(dc);
+            if(getIsCharging()){
+                updateInChargingMode(dc);
+            }else{
+                updateCore(dc);
+            }
         }
     }
 
@@ -21,5 +22,18 @@ class JGSFaceWidget{
     }
 
     protected function updateInLowPowerMode(dc){        
+    }
+
+    protected function updateInChargingMode(dc){
+
+    }
+
+    private function getIsCharging(){
+        var stats = System.getSystemStats();
+        if(stats has :charging){
+            return stats.charging;
+        }else{
+            return false;
+        }
     }
 }

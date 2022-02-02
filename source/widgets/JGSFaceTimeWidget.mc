@@ -20,12 +20,13 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
     }
 
     function updateInLowPowerMode(dc){
-        var clockTime = System.getClockTime();
-        var text = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
         var xOffset = getRandom();
         var yOffset = getRandom();
-        dc.setColor(Colors.TIME_MINS.foreground, Colors.EMPTY);
-        dc.drawText(120 + xOffset, 120 + yOffset, Graphics.FONT_NUMBER_MILD, text, TextJustification.CC);
+        Common.drawLowPowerTime(dc,120 + xOffset, 120 + yOffset);
+    }
+
+    function updateInChargingMode(dc){        
+        Common.drawLowPowerTime(dc, 180, 220);
     }
 
     private function drawContouredText(dc, text, color as ClockColors, y){

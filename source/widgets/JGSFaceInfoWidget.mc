@@ -20,6 +20,22 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
         updateHR(dc);
     }
 
+    function updateInChargingMode(dc){       
+        var settings = System.getDeviceSettings();
+        var notificationCount = settings.notificationCount;
+        
+        var offset = 0;
+         if(settings.doNotDisturb){
+            dc.setColor(Colors.INFO_BASE, Colors.EMPTY);
+            dc.drawText(width - edge, 50, Fonts.get(Fonts.Icons), Icons.DoNotDisturb, TextJustification.RC);
+            offset = 20;
+        }
+        if (notificationCount > 0) {
+            dc.setColor(Colors.INFO_NOTIFICATION, Colors.EMPTY);
+            dc.drawText(width - edge, 50+offset, Fonts.get(Fonts.Icons), Icons.EnvelopeSolid, TextJustification.RC);
+        }  
+    }
+
     private function updateDoNotDisturb(dc, settings){
         var offset = 0;
         if(settings.doNotDisturb){

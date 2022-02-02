@@ -1,11 +1,31 @@
 import Toybox.Weather;
+import Toybox.Lang;
+import Toybox.System;
+import Toybox.Graphics;
 
 module Common{
 	const Widgets = new JGSFaceWidgets();
 
+	function getBatteryColor(batteryLevel){		
+        var result;
+        if (batteryLevel < 15){
+            result = Colors.BATTERY_LOW;
+        } else if (batteryLevel < 30){
+            result = Colors.BATTERY_MID;
+        } else {
+            result = Colors.BATTERY_HIGH;
+        }
+        return result;
+	}
+
+	function drawLowPowerTime(dc, x, y){
+		var clockTime = System.getClockTime();
+        var text = Lang.format("$1$:$2$", [clockTime.hour.format("%02d"), clockTime.min.format("%02d")]);
+        dc.setColor(Colors.TIME_MINS.foreground, Colors.EMPTY);
+        dc.drawText(x, y, Graphics.FONT_NUMBER_MILD, text, TextJustification.CC);
+	}
+
 	function isInSleepMode(){
-		return false;
-		//TODO Disabled for now.
 		var userProfile = Toybox.UserProfile.getProfile();
 
 		var oToday = Toybox.Time.today();
