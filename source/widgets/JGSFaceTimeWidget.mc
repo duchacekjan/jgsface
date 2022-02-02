@@ -5,17 +5,10 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
     private var minsForegroundColor = Graphics.COLOR_LT_GRAY;
     private var hoursBorderColor = 0xf8f800;
     private var minsBorderColor = Graphics.COLOR_WHITE;
-    private var borderFont = null;
-    private var font = null;
     
     function initialize(){
         JGSFaceWidget.initialize();   
         Toybox.Math.srand(System.getTimer()); 
-    }
-
-    function loadResourcesCore(){
-        borderFont = Application.loadResource(Rez.Fonts.contouredBFont);
-        font = Application.loadResource(Rez.Fonts.contouredFont);
     }
 
     function updateCore(dc){
@@ -35,14 +28,9 @@ class JGSFaceTimeWidget extends JGSFaceWidget{
         dc.drawText(120 + xOffset, 120 + yOffset, Graphics.FONT_NUMBER_MILD, text, TextJustification.CC);
     }
 
-    function freeResourcesCore(){
-        borderFont = null;
-        font = null;
-    }
-
     private function drawContouredText(dc, text, color as ClockColors, y){
-        drawColoredText(dc, text, color.border, y, borderFont);
-        drawColoredText(dc, text, color.foreground, y, font);
+        drawColoredText(dc, text, color.border, y, Fonts.get(Fonts.ContouredBackground));
+        drawColoredText(dc, text, color.foreground, y, Fonts.get(Fonts.ContouredForeground));
     }
 
     private function drawColoredText(dc, text, color, y, font){

@@ -7,21 +7,9 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
     private const width = 240;
     private const height = 30;
     private const edge = 10;
-    private var iconsFont = null;
-    private var infoFont = null;
     
     function initialize(){    
         JGSFaceWidget.initialize();
-    }
-
-    function loadResourcesCore(){
-        iconsFont = Application.loadResource(Rez.Fonts.iconsFont);
-        infoFont = Application.loadResource(Rez.Fonts.infoFont);
-    }
-
-    function freeResourcesCore(){
-        iconsFont = null;
-        infoFont = null;
     }
 
     function updateCore(dc){
@@ -36,7 +24,7 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
         var offset = 0;
         if(settings.doNotDisturb){
             dc.setColor(Colors.INFO_BASE, Colors.EMPTY);
-            dc.drawText(0 + edge, height / 2, iconsFont, Icons.DoNotDisturb, TextJustification.LC);
+            dc.drawText(0 + edge, height / 2, Fonts.get(Fonts.Icons), Icons.DoNotDisturb, TextJustification.LC);
             offset = 15;
         }
         return offset;
@@ -45,7 +33,7 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
     private function updateAlarmClock(dc, settings, offset){
         if(settings.alarmCount>0){
             dc.setColor(Colors.INFO_BASE, Colors.EMPTY);
-            dc.drawText(0 + edge + offset, height / 2, iconsFont, Icons.AlarmClock, TextJustification.LC);
+            dc.drawText(0 + edge + offset, height / 2, Fonts.get(Fonts.Icons), Icons.AlarmClock, TextJustification.LC);
         }
     }
 
@@ -53,7 +41,7 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
         var notificationCount = settings.notificationCount;
         if (notificationCount > 0) {
             dc.setColor(Colors.INFO_NOTIFICATION, Colors.EMPTY);
-            dc.drawText(width - edge, height / 2, iconsFont, Icons.EnvelopeSolid, TextJustification.RC);
+            dc.drawText(width - edge, height / 2, Fonts.get(Fonts.Icons), Icons.EnvelopeSolid, TextJustification.RC);
         }  
     }
 
@@ -62,8 +50,8 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
         if(heartRate!=null){
             var heartRateText = heartRate.format("%d");
             dc.setColor(Colors.INFO_HR, Colors.EMPTY);
-            dc.drawText( width/2, height / 2, iconsFont, Icons.HeartBeat, TextJustification.RC); 
-            dc.drawText( width/2 + 2, height / 2 , infoFont, heartRateText, TextJustification.LC);
+            dc.drawText( width/2, height / 2, Fonts.get(Fonts.Icons), Icons.HeartBeat, TextJustification.RC); 
+            dc.drawText( width/2 + 2, height / 2 , Fonts.get(Fonts.ExtraSmall), heartRateText, TextJustification.LC);
         }
     }
 

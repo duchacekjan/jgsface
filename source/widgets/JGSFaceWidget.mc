@@ -1,19 +1,12 @@
-class JGSFaceWidget{
-    
-    protected var isVisible = false;
+class JGSFaceWidget{    
     protected var isLowPowerMode = false;
 
     function initialize(){  
     }
 
-    function loadResources(){
-        isVisible = true;
-        loadResourcesCore();
-    }
-
     function update(dc, isLowPowerMode){
         isLowPowerMode = isLowPowerMode;
-        if(!isVisible){
+        if(!Common.Widgets.isVisible){
             return;
         }
 
@@ -22,17 +15,6 @@ class JGSFaceWidget{
         }else{
             updateCore(dc);
         }
-    }
-
-    function freeResources(){
-        freeResourcesCore();
-        isVisible = false;
-    }
-
-    protected function freeResourcesCore(){
-    }
-
-    protected function loadResourcesCore(){
     }
 
     protected function updateCore(dc){

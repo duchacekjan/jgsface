@@ -6,20 +6,11 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
     private const PROGRESS_STROKE = 4;
     private var x;
     private var y;
-    private var smallFont = null;
     
     function initialize(){    
         JGSFaceWidget.initialize();
         x = startX + 35 + 5;
         y = startY - RADIUS_L - 10;
-    }
-
-    function loadResourcesCore(){
-        smallFont = Application.loadResource(Rez.Fonts.smallFont);
-    }
-
-    function freeResourcesCore(){
-        smallFont = null;
     }
 
     function updateCore(dc){
@@ -64,7 +55,7 @@ class JGSFaceProgressWidget extends JGSFaceWidget{
         if(batteryLevel<100){
             text = text + "%";
         }
-        dc.drawText(x, y, smallFont, text, TextJustification.CC);
+        dc.drawText(x, y, Fonts.get(Fonts.Small), text, TextJustification.CC);
     }
 
     private function drawProgress(dc as Dc, radius, percentageProgress, color, stroke){
