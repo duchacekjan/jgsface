@@ -1,5 +1,6 @@
-module Widgets{
-    var mWidgets;
+class JGSFaceWidgets{
+    private var mWidgets;
+    private var mFonts;
 
     function initialize(){
         mWidgets = new [6];

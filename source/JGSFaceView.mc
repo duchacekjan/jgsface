@@ -10,7 +10,6 @@ class JGSFaceView extends WatchUi.WatchFace {
     function initialize() {
         WatchFace.initialize();
         inLowPowerMode = false;
-        Widgets.initialize();
     }
 
     // Load your resources here
@@ -21,7 +20,7 @@ class JGSFaceView extends WatchUi.WatchFace {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void { 
-        Widgets.loadResources();
+        Common.Widgets.loadResources();
     }
 
     // Update the view
@@ -29,14 +28,14 @@ class JGSFaceView extends WatchUi.WatchFace {
 
         dc.setColor(Colors.BACKGROUND,Colors.BACKGROUND);
     	dc.clear();
-        Widgets.update(dc, inLowPowerMode);
+        Common.Widgets.update(dc, inLowPowerMode);
     }
 
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() as Void {
-        Widgets.freeResources();
+        Common.Widgets.freeResources();
     }
 
     // The user has just looked at their watch. Timers and animations may be started here.

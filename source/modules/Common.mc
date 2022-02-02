@@ -1,6 +1,8 @@
 import Toybox.Weather;
 
 module Common{
+	const Widgets = new JGSFaceWidgets();
+
 	function isInSleepMode(){
 		return false;
 		//TODO Disabled for now.
