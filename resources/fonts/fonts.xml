@@ -5,4 +5,5 @@
     <font id="smallFont" filename="small-jgs-font.fnt" antialias="true" filter="-0123456789°CF%NA/ "/>
     <font id="iconsFont" filename="icons-jgs.fnt" antialias="true" filter="ABCDE"/>
     <font id="infoFont" filename="info-jgs.fnt" antialias="true" filter="0123456789"/>
+    <font id="iconsBigFont" filename="icons-big-jgs.fnt" antialias="true" filter="F"/>
 </fonts>

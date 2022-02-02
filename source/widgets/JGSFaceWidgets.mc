@@ -21,7 +21,7 @@ class JGSFaceWidgets{
         Fonts.loadFont(Fonts.ExtraSmall, Application.loadResource(Rez.Fonts.infoFont));
         Fonts.loadFont(Fonts.ContouredForeground, Application.loadResource(Rez.Fonts.contouredFont));
         Fonts.loadFont(Fonts.ContouredBackground, Application.loadResource(Rez.Fonts.contouredBFont));
-        Fonts.loadFont(Fonts.IconsBig, null);
+        Fonts.loadFont(Fonts.IconsBig, Application.loadResource(Rez.Fonts.iconsBigFont));
     }
 
     function update(dc, inLowPowerMode){
