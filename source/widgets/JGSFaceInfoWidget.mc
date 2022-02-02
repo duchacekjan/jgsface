@@ -22,18 +22,10 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
 
     function updateInChargingMode(dc){       
         var settings = System.getDeviceSettings();
-        var notificationCount = settings.notificationCount;
-        
-        var offset = 0;
-         if(settings.doNotDisturb){
-            dc.setColor(Colors.INFO_BASE, Colors.EMPTY);
-            dc.drawText(width - edge, 50, Fonts.get(Fonts.Icons), Icons.DoNotDisturb, TextJustification.RC);
-            offset = 20;
-        }
-        if (notificationCount > 0) {
-            dc.setColor(Colors.INFO_NOTIFICATION, Colors.EMPTY);
-            dc.drawText(width - edge, 50+offset, Fonts.get(Fonts.Icons), Icons.EnvelopeSolid, TextJustification.RC);
-        }  
+        updateNotifications(dc, settings);
+        var offset = updateDoNotDisturb(dc, settings);
+        updateAlarmClock(dc, settings, offset);
+        updateBatteryLevel(dc);
     }
 
     private function updateDoNotDisturb(dc, settings){
@@ -69,6 +61,14 @@ class JGSFaceInfoWidget extends JGSFaceWidget {
             dc.drawText( width/2, height / 2, Fonts.get(Fonts.Icons), Icons.HeartBeat, TextJustification.RC); 
             dc.drawText( width/2 + 2, height / 2 , Fonts.get(Fonts.ExtraSmall), heartRateText, TextJustification.LC);
         }
+    }
+
+    private function updateBatteryLevel(dc){
+        var batteryLevel = System.getSystemStats().battery;
+        var color = Common.getBatteryColor(batteryLevel);
+        var batteryLevelText = Lang.format("$1$ %",[batteryLevel.format("%d")]);
+        dc.setColor(color, Colors.EMPTY);
+        dc.drawText(width/2, height / 2, Fonts.get(Fonts.ExtraSmall), batteryLevelText, TextJustification.CC); 
     }
 
     private function getHeartRate(){

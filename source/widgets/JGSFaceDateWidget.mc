@@ -22,7 +22,7 @@ class JGSFaceDateWidget extends JGSFaceWidget{
     function updateInChargingMode(dc){        
         var info = Time.Gregorian.info(Time.now(), Time.FORMAT_LONG);
         var dateStr = Lang.format("$1$ $2$ $3$", [info.month, info.day, info.day_of_week]);
-        dc.setColor(Colors.DATE_FOREGROUND, Colors.EMPTY);
+        dc.setColor(Colors.TIME_MINS.foreground, Colors.EMPTY);
        	dc.drawText(60, 220, Graphics.FONT_TINY, dateStr, TextJustification.CC);   
     }
 }

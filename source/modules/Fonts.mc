@@ -15,14 +15,6 @@ module Fonts{
 
     function loadFont(id, font){
         mFonts[id] = font;
-        // mFonts = new [7];
-        // mFonts[0] = Application.loadResource(Rez.Fonts.weatherFont);
-        // mFonts[1] = Application.loadResource(Rez.Fonts.iconsFont);
-        // mFonts[2] = Application.loadResource(Rez.Fonts.smallFont);
-        // mFonts[3] = Application.loadResource(Rez.Fonts.infoFont);
-        // mFonts[4] = Application.loadResource(Rez.Fonts.contouredFont);
-        // mFonts[5] = Application.loadResource(Rez.Fonts.contouredBFont);
-        // mFonts[7] = null; //Application.loadResource(Rez.Fonts.iconsBigFont); TODO
     }
 
     function get(font){

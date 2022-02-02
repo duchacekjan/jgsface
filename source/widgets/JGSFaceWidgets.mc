@@ -18,7 +18,7 @@ class JGSFaceWidgets{
         Fonts.loadFont(Fonts.Weather, Application.loadResource(Rez.Fonts.weatherFont));
         Fonts.loadFont(Fonts.Icons, Application.loadResource(Rez.Fonts.iconsFont));
         Fonts.loadFont(Fonts.Small, Application.loadResource(Rez.Fonts.smallFont));
-        Fonts.loadFont(Fonts.ExtraSmall, Application.loadResource(Rez.Fonts.infoFont));
+        Fonts.loadFont(Fonts.ExtraSmall, Application.loadResource(Rez.Fonts.extraSmallFont));
         Fonts.loadFont(Fonts.ContouredForeground, Application.loadResource(Rez.Fonts.contouredFont));
         Fonts.loadFont(Fonts.ContouredBackground, Application.loadResource(Rez.Fonts.contouredBFont));
         Fonts.loadFont(Fonts.IconsBig, Application.loadResource(Rez.Fonts.iconsBigFont));
