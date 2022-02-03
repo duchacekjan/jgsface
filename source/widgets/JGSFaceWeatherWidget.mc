@@ -17,7 +17,7 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
     function updateCore(dc){
         drawLead(dc);
         var weather = null;
-        if (Weather has :getCurrentConditions && Weather.getCurrentConditions()!=null) {
+        if (Weather has :getCurrentConditions) {
             weather = Weather.getCurrentConditions();
         } 
         drawTemperature(dc, weather);
@@ -48,10 +48,12 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
 
     private function getTemperature(weather){
         var result = new Temperature(null);
-        if(weather has :temperature){
-            result = new Temperature(weather.temperature);
-        } else if(weather has :feelsLikeTemperature){
-            result = new Temperature(weather.feelsLikeTemperature);
+        if(weather !=null){
+            if(weather has :temperature){
+                result = new Temperature(weather.temperature);
+            } else if(weather has :feelsLikeTemperature){
+                result = new Temperature(weather.feelsLikeTemperature);
+            }
         }
         return result;
     }
