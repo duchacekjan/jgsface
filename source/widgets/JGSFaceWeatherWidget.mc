@@ -26,7 +26,7 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
 
     private function drawWeatherIcon(dc, weather){
         var condition = null;
-        if (weather!=null) {
+        if (weather!=null and weather has :condition) {
             condition = weather.condition;
         }
         var iconCode = Common.getWeatherIconCode(condition, System.getClockTime());
@@ -48,7 +48,7 @@ class JGSFaceWeatherWidget extends JGSFaceWidget{
 
     private function getTemperature(weather){
         var result = new Temperature(null);
-        if(weather !=null){
+        if(weather !=null && weather instanceof Weather.CurrentConditions){
             if(weather has :temperature){
                 result = new Temperature(weather.temperature);
             } else if(weather has :feelsLikeTemperature){

@@ -52,7 +52,10 @@ module Common{
 
     function getWeatherIconCode(condition, clockTime){
 		var isNight = clockTime.hour >= 18 or clockTime.hour < 6;
-		var code;
+		if(condition==null){
+			return "0";
+		}
+		var code = null;
 		switch(condition){
 			case Toybox.Weather.CONDITION_CLEAR:{
 				code='A';
